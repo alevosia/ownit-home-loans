@@ -25,7 +25,7 @@
 		"lint:fix": "eslint . --fix",
 		"delete-build": "rimraf -rf build",
 		"convert-index-to-php": "mv build/index.html build/index.php",
-		"copy-theme-files": "cp theme/* build"
+		"copy-theme-files": "cp wp-theme/* build"
 	},
 	"browserslist": {
 		"production": [
