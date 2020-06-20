@@ -1,12 +1,12 @@
-import { Questionnaire } from '../../types'
+import { Question } from '../../types'
 
-export const QUESTIONS: Questionnaire = [
+export const QUESTIONS: Question[] = [
     {
         id: '1',
         type: 'CHOICES',
         inquiry: 'Where are you in your property buying journey?',
         choices: [
-            { id: 'A', value: 'I just bought.' },
+            { id: 'A', value: 'I just bought' },
             { id: 'B', value: "I'm ready to make offers" },
             { id: 'C', value: "I'm searching & inspecting" },
             { id: 'D', value: "I'm just browsing" }

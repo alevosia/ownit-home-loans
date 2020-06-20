@@ -8,13 +8,8 @@ export interface Choice {
 export interface InputField {
     id: string
     name: string
-    type: string
+    type: 'text' | 'email' | 'number' | 'password'
     placeholder?: string
-}
-
-interface InputData {
-    name: string
-    value: string
 }
 
 export interface Question {
@@ -24,14 +19,18 @@ export interface Question {
     type: QuestionType
     choices?: Choice[]
     inputFields?: InputField[]
-    value?: string | InputData[]
+    value?: string
 }
 
-export type Questionnaire = Question[]
-
-export interface QuestionnaireData {
+export interface Responses {
     [key: string]: {
         inquiry: string
         value: string
+        type: QuestionType
     }
+}
+
+export interface ContactAPIResponse {
+    message?: string
+    sent: boolean
 }
