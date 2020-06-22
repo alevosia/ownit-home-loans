@@ -22,6 +22,8 @@ const FormQuestion: React.FC<Props> = ({
         event.preventDefault()
         nextQuestionHandler(event)
     }
+
+    // Renders multiple choices or input fields depending on the question type
     return (
         <Wrapper>
             <FormHeader

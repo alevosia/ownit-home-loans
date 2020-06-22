@@ -28,6 +28,9 @@ const Form: React.FC = () => {
 
     const { index, responses, submitted, submitting, sent, error } = formState
 
+    // The handler for 'CHOICES' type of question
+    // Adds or modifies the 'responses' hash table of formState using the
+    // question id as key, question inquiry and selected/clicked choice's value as properties
     const choiceSelectHandler = (question: Question, choice: Choice) => {
         setFormState((prevState) => {
             const { responses } = prevState
@@ -45,6 +48,10 @@ const Form: React.FC = () => {
         })
     }
 
+    // The handler for 'INPUT' type of question
+    // Adds or modifies the 'responses' hash table of formState
+    // using the input field's id as key, and its placeholder as the inquiry and the
+    // event.target's (the input element) value as the value
     const inputBlurHandler = (
         event: React.FocusEvent<HTMLInputElement>,
         inputField: InputField
@@ -60,6 +67,7 @@ const Form: React.FC = () => {
         })
     }
 
+    // Deccrements the index by one
     const previousQuestion = () => {
         setFormState((prevState) => ({
             ...prevState,
@@ -67,6 +75,7 @@ const Form: React.FC = () => {
         }))
     }
 
+    // Increments the index by one
     const nextQuestion = (_: React.FormEvent<HTMLFormElement>) => {
         setFormState((prevState) => ({
             ...prevState,
@@ -78,6 +87,7 @@ const Form: React.FC = () => {
         setFormState(INITIAL_FORM_STATE)
     }
 
+    // Restructures and prepares the data from 'responses' for email sending
     const submitForm = useCallback(async () => {
         // TODO: Improve validation
         if (responses['name'] == null || responses['email'] == null) {
@@ -106,14 +116,16 @@ const Form: React.FC = () => {
         })
     }, [responses])
 
+    // This effect checks if submitting is true which calls the submitForm function above
     useEffect(() => {
         if (submitting) {
             submitForm()
         }
     }, [submitting, submitForm])
 
+    // This effect checks if index is greater than or equal to the questions' length
+    // if yes, set 'submitting' property of formState to true which triggers the effect above
     useEffect(() => {
-        // if we reach the end, submit form
         if (index >= QUESTIONS.length) {
             setFormState((prevState) => ({
                 ...prevState,
@@ -122,6 +134,8 @@ const Form: React.FC = () => {
         }
     }, [index, responses])
 
+    // Renders the form if formState is NOT yet submitted and there is still a question,
+    // else renders error, submitting, sent or failed
     return (
         <Wrapper id="Form">
             <BackArrowWrapper onClick={previousQuestion}>

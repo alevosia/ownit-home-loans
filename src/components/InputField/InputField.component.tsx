@@ -2,8 +2,6 @@ import React, { useRef, useEffect } from 'react'
 
 import { Wrapper, Input, IncrementButton } from './InputField.styles.ts'
 
-// type InputValue = string | number
-
 interface Props {
     inputField: InputField
     onBlurHandler: (event: React.FocusEvent<HTMLInputElement>) => void
@@ -13,16 +11,16 @@ const InputField: React.FC<Props> = ({
     inputField: { id, name, type, placeholder, defaultValue, min, max, incrementBy },
     onBlurHandler
 }) => {
-    // const [value, setValue] = useState<InputValue>(0)
     const inputRef = useRef<HTMLInputElement>(null)
 
-    // Set input field's value to the default at mount
+    // Set the input field's value to the default at mount of component
     useEffect(() => {
         if (defaultValue != null && inputRef && inputRef.current) {
             inputRef.current.value = defaultValue.toString()
         }
     }, [defaultValue])
 
+    // Triggers everytime the input value has changed
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         if (inputRef && inputRef.current) {
             const { target } = event
@@ -43,8 +41,9 @@ const InputField: React.FC<Props> = ({
         }
     }
 
+    // Adds one to the value of input type is number and incrementBy is defined
     const incrementNumberValue = () => {
-        if (inputRef && inputRef.current && incrementBy !== undefined) {
+        if (inputRef.current && type === 'number' && incrementBy !== undefined) {
             inputRef.current.focus()
             inputRef.current.value = (Number(inputRef.current.value) + incrementBy).toString()
             inputRef.current.blur()
