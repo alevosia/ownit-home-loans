@@ -1,11 +1,12 @@
 import styled from 'styled-components'
 
 import { Breakpoints, FontSizes, Colors } from '../../constants'
+import { ReactComponent as ArrowLeft } from '../../assets/arrow-left-solid.svg'
 
 export const Wrapper = styled.div`
     width: 100%;
     max-width: 768px;
-    margin: 30% auto 0 auto;
+    margin: 20% auto 0 auto;
 
     @media only screen and (min-width: ${Breakpoints.TABLET}px) {
         margin: 10% auto 0 auto;
@@ -13,15 +14,17 @@ export const Wrapper = styled.div`
 `
 
 export const BackArrowWrapper = styled.div`
-    margin-bottom: 10px;
+    height: 55px;
+    width: auto;
 `
 
-export const BackArrow = styled.span<{ visible: boolean }>`
+export const BackArrow = styled(ArrowLeft)`
     cursor: pointer;
-    font-size: ${FontSizes.LARGE};
+    font-size: ${FontSizes.REGULAR};
     color: ${Colors.LIGHT_BLUE};
     padding: 0 10px;
-    display: ${({ visible }) => (visible ? 'inline-block' : 'none')};
+    width: 50px;
+    padding: 10px;
 `
 
 export const ResultWrapper = styled.div`

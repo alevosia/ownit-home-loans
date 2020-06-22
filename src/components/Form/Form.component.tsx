@@ -139,7 +139,11 @@ const Form: React.FC = () => {
     return (
         <Wrapper id="Form">
             <BackArrowWrapper onClick={previousQuestion}>
-                <BackArrow visible={index > 0 && index < QUESTIONS.length}>⮘</BackArrow>
+                <BackArrow
+                    style={{
+                        display: index > 0 && index < QUESTIONS.length ? 'inline-block' : 'none'
+                    }}
+                />
             </BackArrowWrapper>
             {!submitted && QUESTIONS[index] ? (
                 <FormQuestion
@@ -154,13 +158,19 @@ const Form: React.FC = () => {
                         <ResultHeaderText>Result</ResultHeaderText>
                     </ResultHeader>
                     <ResultMessage>
-                        {error
-                            ? Messages.MESSAGE_ERROR
-                            : submitting
-                            ? Messages.MESSAGE_SENDING
-                            : sent
-                            ? Messages.MESSAGE_SUCCESS
-                            : Messages.MESSAGE_FAILED}
+                        {error ? (
+                            Messages.MESSAGE_ERROR
+                        ) : submitting ? (
+                            Messages.MESSAGE_SENDING
+                        ) : sent ? (
+                            <div>
+                                <p>{Messages.MESSAGE_SUCCESS}</p>
+                                <br />
+                                <p>{Messages.MESSAGE_SUCCESS2}</p>
+                            </div>
+                        ) : (
+                            Messages.MESSAGE_FAILED
+                        )}
                     </ResultMessage>
                 </ResultWrapper>
             )}
