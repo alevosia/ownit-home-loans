@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import { Colors } from '../../constants'
 
-export const AppWrapper = styled.div`
+export const Wrapper = styled.div`
     position: relative;
     color: ${Colors.DARK_BLUE};
     background-color: ${Colors.WHITE};

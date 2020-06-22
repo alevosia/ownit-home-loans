@@ -1,14 +1,14 @@
 import React from 'react'
-import { AppWrapper } from './App.styles'
+import { Wrapper } from './App.styles'
 
 // pages
 import FormPage from '../../pages/Form/Form.page'
 
 const App: React.FC = () => {
     return (
-        <AppWrapper id="App">
+        <Wrapper id="App">
             <FormPage />
-        </AppWrapper>
+        </Wrapper>
     )
 }
 
