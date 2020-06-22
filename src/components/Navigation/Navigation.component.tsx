@@ -8,11 +8,13 @@ const Navigation: React.FC = () => {
     return (
         <Wrapper id="Navigation">
             <LogoWrapper>
-                <img src={Logo} alt="logo" />
+                <Link href="/">
+                    <img src={Logo} alt="logo" />
+                </Link>
             </LogoWrapper>
             <LinksWrapper>
                 <Link href="#">Home</Link>
-                <Link href="#">Form</Link>
+                <Link href="/">Form</Link>
                 <Link href="#">Contact</Link>
             </LinksWrapper>
         </Wrapper>
