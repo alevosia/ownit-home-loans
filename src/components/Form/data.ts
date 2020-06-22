@@ -55,8 +55,6 @@ export const QUESTIONS: Question[] = [
                 id: 'dependents',
                 name: 'Dependents',
                 type: 'number',
-                // placeholder: '0',
-                // defaultValue: 1,
                 incrementBy: 1,
                 min: 0
             }
@@ -75,10 +73,8 @@ export const QUESTIONS: Question[] = [
                 id: 'funds',
                 name: 'Funds',
                 type: 'number',
-                // placeholder: '0',
-                // defaultValue: 25000,
                 incrementBy: 5000,
-                min: 1000
+                min: 0
             }
         ]
     },
