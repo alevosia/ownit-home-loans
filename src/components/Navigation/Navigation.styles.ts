@@ -14,8 +14,9 @@ export const Wrapper = styled.div`
 `
 
 export const LogoWrapper = styled.div`
-    width: 120px;
+    max-width: 120px;
     height: auto;
+    margin-right: 10px;
 
     img {
         height: 100%;
@@ -39,7 +40,13 @@ export const Link = styled.a`
     text-decoration: none;
 
     &:not(:last-child) {
-        margin-right: 15px;
+        margin-right: 10px;
+    }
+
+    @media only screen and (min-width: ${Breakpoints.PHONE}px) {
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
     }
 
     @media only screen and (min-width: ${Breakpoints.TABLET}px) {
