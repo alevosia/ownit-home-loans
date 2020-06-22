@@ -72,7 +72,8 @@ export const QUESTIONS: Question[] = [
             {
                 id: 'funds',
                 name: 'Funds',
-                type: 'number',
+                type: 'text',
+                money: true,
                 incrementBy: 5000,
                 min: 0
             }
@@ -80,13 +81,45 @@ export const QUESTIONS: Question[] = [
     },
     {
         id: '8',
-        type: 'CHOICES',
+        type: 'INPUT',
         inquiry: 'What is your salary?',
-        choices: [
-            { id: 'A', value: 'Weekly' },
-            { id: 'B', value: 'Fortnightly' },
-            { id: 'C', value: 'Monthly' },
-            { id: 'D', value: 'Anually' }
+        inputFields: [
+            {
+                id: 'weekly',
+                name: 'weekly',
+                placeholder: 'Weekly Salary',
+                type: 'text',
+                money: true,
+                incrementBy: 100,
+                min: 0
+            },
+            {
+                id: 'fortnightly',
+                name: 'fortnightly',
+                placeholder: 'Fortnightly Salary',
+                type: 'text',
+                money: true,
+                incrementBy: 1000,
+                min: 0
+            },
+            {
+                id: 'monthly',
+                name: 'monthly',
+                placeholder: 'Monthly Salary',
+                type: 'text',
+                money: true,
+                incrementBy: 5000,
+                min: 0
+            },
+            {
+                id: 'annual',
+                name: 'annual',
+                placeholder: 'Annual Salary',
+                type: 'text',
+                money: true,
+                incrementBy: 25000,
+                min: 0
+            }
         ]
     },
     {

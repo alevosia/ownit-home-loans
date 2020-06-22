@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react'
 
-import { Wrapper, Input, IncrementButton } from './InputField.styles.ts'
+import { Wrapper, DollarSign, Input, IncrementButton } from './InputField.styles'
 
 interface Props {
     inputField: InputField
@@ -8,7 +8,7 @@ interface Props {
 }
 
 const InputField: React.FC<Props> = ({
-    inputField: { id, name, type, placeholder, defaultValue, min, max, incrementBy },
+    inputField: { id, name, type, money, placeholder, defaultValue, min, max, incrementBy },
     onBlurHandler
 }) => {
     const inputRef = useRef<HTMLInputElement>(null)
@@ -52,6 +52,7 @@ const InputField: React.FC<Props> = ({
 
     return (
         <Wrapper>
+            {money && <DollarSign>$</DollarSign>}
             <Input
                 ref={inputRef}
                 onChange={handleChange}

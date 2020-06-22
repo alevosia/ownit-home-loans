@@ -12,6 +12,14 @@ export const Wrapper = styled.div`
     border-radius: 5px;
 `
 
+export const DollarSign = styled.span`
+    position: absolute;
+    left: 15px;
+    top: 6px;
+    color: ${Colors.WHITE};
+    font-size: ${FontSizes.BIG};
+`
+
 export const Input = styled.input`
     height: auto;
     width: 100%;

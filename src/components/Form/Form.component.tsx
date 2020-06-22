@@ -56,15 +56,26 @@ const Form: React.FC = () => {
         event: React.FocusEvent<HTMLInputElement>,
         inputField: InputField
     ) => {
-        const { value } = event.target
+        let { value } = event.target
         const key = inputField.id
         const inquiry = inputField.placeholder || inputField.name
+
+        // Remove any non digits if its money and localize it
+        if (inputField.money && inputField.type === 'text') {
+            value = Number(value.replace(/\D/gm, '')).toLocaleString()
+            // update input element's value
+            event.target.value = value
+            // append dollars sign before setting formState
+            value = '$' + value
+        }
 
         setFormState((prevState) => {
             const { responses } = prevState
             responses[key] = { inquiry, value }
             return { ...prevState, responses }
         })
+
+        return
     }
 
     // Deccrements the index by one

@@ -28,6 +28,7 @@ interface InputField {
     id: string
     name: string
     type: 'text' | 'email' | 'number' | 'password'
+    money?: boolean
     defaultValue?: string | number
     placeholder?: string
     min?: number
