@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 
-import { Colors, FontSizes } from '../../constants'
+import { Colors, FontSizes, Breakpoints } from '../../constants'
 
 export const Wrapper = styled.div`
     height: 50px;
     width: 100%;
     padding: 0px 15px;
-    border-bottom: 1px solid gray;
+    box-shadow: 0px -5px 8px black;
     text-align: center;
     display: flex;
     align-items: center;
@@ -40,5 +40,17 @@ export const Link = styled.a`
 
     &:not(:last-child) {
         margin-right: 15px;
+    }
+
+    @media only screen and (min-width: ${Breakpoints.TABLET}px) {
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+
+    @media only screen and (min-width: ${Breakpoints.DESKTOP}px) {
+        &:not(:last-child) {
+            margin-right: 45px;
+        }
     }
 `
