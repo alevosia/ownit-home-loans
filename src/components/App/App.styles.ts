@@ -1,16 +1,16 @@
 import styled from 'styled-components'
 import theme from 'styled-theming'
 
-import { BLACK, WHITE } from '../../constants'
+import { Colors } from '../../constants'
 
 const backgroundColor = theme('mode', {
-    light: WHITE,
-    dark: BLACK
+    light: Colors.WHITE,
+    dark: Colors.BLACK
 })
 
 const color = theme('mode', {
-    light: BLACK,
-    dark: WHITE
+    light: Colors.BLACK,
+    dark: Colors.WHITE
 })
 
 export const AppWrapper = styled.div`

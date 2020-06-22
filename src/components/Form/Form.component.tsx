@@ -1,18 +1,30 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import { QUESTIONS } from './data'
 import { sendEmail } from '../../utils/sendEmail'
-import { MESSAGE_SUCCESS, MESSAGE_ERROR, MESSAGE_FAILED } from '../../constants/form'
+import { Messages } from '../../constants'
 import FormQuestion from '../FormQuestion/FormQuestion.component'
 
+import {
+    Wrapper,
+    BackArrowWrapper,
+    BackArrow,
+    ResultWrapper,
+    ResultHeader,
+    ResultHeaderText,
+    ResultMessage
+} from './Form.styles'
+
+const INITIAL_FORM_STATE: FormState = {
+    index: 0,
+    responses: {},
+    submitted: false,
+    submitting: false,
+    sent: false,
+    error: null
+}
+
 const Form: React.FC = () => {
-    const [formState, setFormState] = useState<FormState>({
-        index: 0,
-        responses: {},
-        submitted: false,
-        submitting: false,
-        sent: false,
-        error: null
-    })
+    const [formState, setFormState] = useState<FormState>(INITIAL_FORM_STATE)
 
     const { index, responses, submitted, submitting, sent, error } = formState
 
@@ -35,11 +47,10 @@ const Form: React.FC = () => {
 
     const inputBlurHandler = (
         event: React.FocusEvent<HTMLInputElement>,
-        question: Question,
         inputField: InputField
     ) => {
         const { value } = event.target
-        const key = question.id + inputField.id
+        const key = inputField.id
         const inquiry = inputField.placeholder || inputField.name
 
         setFormState((prevState) => {
@@ -49,27 +60,39 @@ const Form: React.FC = () => {
         })
     }
 
-    const nextQuestion = () => {
+    const previousQuestion = () => {
         setFormState((prevState) => ({
             ...prevState,
-            index: prevState.index + 1
+            index: prevState.index > 0 ? prevState.index - 1 : 0
         }))
     }
 
+    const nextQuestion = (_: React.FormEvent<HTMLFormElement>) => {
+        setFormState((prevState) => ({
+            ...prevState,
+            index: prevState.index < QUESTIONS.length ? prevState.index + 1 : 0
+        }))
+    }
+
+    const resetFormState = () => {
+        setFormState(INITIAL_FORM_STATE)
+    }
+
     const submitForm = useCallback(async () => {
-        console.log(responses)
-        const name = responses['9A'].value
-        const email = responses['9B'].value
+        // TODO: Improve validation
+        if (responses['name'] == null || responses['email'] == null) {
+            alert("Something's wrong. Resetting form...")
+            return resetFormState()
+        }
+
+        const name = responses['name'].value
+        const email = responses['email'].value
 
         let message = ''
 
         for (const key in responses) {
             message += `<strong>${responses[key].inquiry}</strong><br>${responses[key].value}<br><br>`
         }
-
-        console.log('Name: ' + name)
-        console.log('Email: ' + email)
-        console.log(message)
 
         const response = await sendEmail(name, email, message)
 
@@ -90,33 +113,44 @@ const Form: React.FC = () => {
     }, [submitting, submitForm])
 
     useEffect(() => {
+        // if we reach the end, submit form
         if (index >= QUESTIONS.length) {
             setFormState((prevState) => ({
                 ...prevState,
                 submitting: true
             }))
         }
-    }, [index])
+    }, [index, responses])
 
     return (
-        <div id="Form">
-            {submitting ? (
-                <div>Sending...</div>
-            ) : !submitted && QUESTIONS[index] ? (
+        <Wrapper id="Form">
+            <BackArrowWrapper onClick={previousQuestion}>
+                <BackArrow visible={index > 0 && index < QUESTIONS.length}>⮘</BackArrow>
+            </BackArrowWrapper>
+            {!submitted && QUESTIONS[index] ? (
                 <FormQuestion
                     question={QUESTIONS[index]}
                     nextQuestionHandler={nextQuestion}
                     onChoiceSelectHandler={choiceSelectHandler}
                     onInputBlurHandler={inputBlurHandler}
                 />
-            ) : error ? (
-                <div>{MESSAGE_ERROR}</div>
-            ) : sent ? (
-                <div>{MESSAGE_SUCCESS}</div>
             ) : (
-                <div>{MESSAGE_FAILED}</div>
+                <ResultWrapper>
+                    <ResultHeader>
+                        <ResultHeaderText>Result</ResultHeaderText>
+                    </ResultHeader>
+                    <ResultMessage>
+                        {error
+                            ? Messages.MESSAGE_ERROR
+                            : submitting
+                            ? Messages.MESSAGE_SENDING
+                            : sent
+                            ? Messages.MESSAGE_SUCCESS
+                            : Messages.MESSAGE_FAILED}
+                    </ResultMessage>
+                </ResultWrapper>
             )}
-        </div>
+        </Wrapper>
     )
 }
 

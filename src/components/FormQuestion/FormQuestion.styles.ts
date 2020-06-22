@@ -1,12 +1,13 @@
 import styled from 'styled-components'
-import { DARK_BLUE } from '../../constants'
 
-export const FormQuestionWrapper = styled.div`
+import { Colors, FontSizes } from '../../constants'
+
+export const Wrapper = styled.div`
     height: auto;
     width: auto;
 `
 
-export const FormBody = styled.div`
+export const FormBody = styled.form`
     height: auto;
     width: auto;
     display: flex;
@@ -15,7 +16,8 @@ export const FormBody = styled.div`
 
 export const FormInputsWrapper = styled.div`
     height: auto;
-    width: auto;
+    width: 100%;
+    max-width: 320px;
     text-align: center;
 `
 
@@ -24,13 +26,15 @@ export const FlexColumn = styled.div`
     flex-direction: column;
 `
 
-export const Submit = styled.span`
+export const Submit = styled.button`
     cursor: pointer;
-    color: ${DARK_BLUE};
+    color: ${Colors.DARK_BLUE};
     letter-spacing: 2px;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: ${FontSizes.BIG};
     font-weight: bold;
     text-align: center;
     width: 125px;
+    border: none;
+    background: none;
 `

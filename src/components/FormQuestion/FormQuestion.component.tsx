@@ -1,12 +1,6 @@
 import React from 'react'
 
-import {
-    FormQuestionWrapper,
-    FormBody,
-    FormInputsWrapper,
-    FlexColumn,
-    Submit
-} from './FormQuestion.styles'
+import { Wrapper, FormBody, FormInputsWrapper, FlexColumn, Submit } from './FormQuestion.styles'
 import FormHeader from '../FormHeader/FormHeader.component'
 import FormChoice from '../FormChoice/FormChoice.component'
 import InputField from '../InputField/InputField.component'
@@ -14,12 +8,8 @@ import InputField from '../InputField/InputField.component'
 interface Props {
     question: Question
     onChoiceSelectHandler: (question: Question, choice: Choice) => void
-    onInputBlurHandler: (
-        event: React.FocusEvent<HTMLInputElement>,
-        question: Question,
-        inputField: InputField
-    ) => void
-    nextQuestionHandler: (event: React.MouseEvent<HTMLSpanElement, MouseEvent>) => void
+    onInputBlurHandler: (event: React.FocusEvent<HTMLInputElement>, inputField: InputField) => void
+    nextQuestionHandler: (event: React.FormEvent<HTMLFormElement>) => void
 }
 
 const FormQuestion: React.FC<Props> = ({
@@ -28,15 +18,19 @@ const FormQuestion: React.FC<Props> = ({
     onInputBlurHandler,
     nextQuestionHandler
 }) => {
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault()
+        nextQuestionHandler(event)
+    }
     return (
-        <FormQuestionWrapper>
+        <Wrapper>
             <FormHeader
                 id={question.id}
                 inquiry={question.inquiry}
                 description={question.description}
             />
 
-            <FormBody>
+            <FormBody onSubmit={handleSubmit}>
                 {question.type === 'CHOICES' ? (
                     <FlexColumn>
                         {question.choices?.map((choice) => (
@@ -54,17 +48,15 @@ const FormQuestion: React.FC<Props> = ({
                                 <InputField
                                     key={inputField.id}
                                     inputField={inputField}
-                                    onBlurHandler={(event) =>
-                                        onInputBlurHandler(event, question, inputField)
-                                    }
+                                    onBlurHandler={(event) => onInputBlurHandler(event, inputField)}
                                 />
                             ))}
                         </FlexColumn>
-                        <Submit onClick={nextQuestionHandler}>Submit</Submit>
+                        <Submit type="submit">Submit</Submit>
                     </FormInputsWrapper>
                 )}
             </FormBody>
-        </FormQuestionWrapper>
+        </Wrapper>
     )
 }
 

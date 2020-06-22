@@ -1,22 +1,27 @@
 import styled from 'styled-components'
 
-import { FONT_SIZES, WHITE, LIGHT_BLUE, DARK_BLUE } from '../../constants'
+import { FontSizes, Colors } from '../../constants'
 
-export const FormHeaderWrapper = styled.div`
+export const Wrapper = styled.div`
     height: auto;
     width: 100%;
     position: relative;
-    padding: 30px 15px;
-    color: ${WHITE};
-    background-color: ${LIGHT_BLUE};
+    padding: 45px 15px 30px 15px;
+    color: ${Colors.WHITE};
+    background-color: ${Colors.LIGHT_BLUE};
+    margin-bottom: 30px;
     text-align: center;
-    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    border-radius: 5px;
 `
 
 export const QuestionIdWrapper = styled.div`
     width: 60px;
     height: 60px;
-    background-color: ${WHITE};
+    background-color: ${Colors.WHITE};
     border-radius: 50%;
     position: absolute;
     top: -35px;
@@ -32,19 +37,21 @@ export const QuestionId = styled.div`
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: ${DARK_BLUE};
+    background-color: ${Colors.DARK_BLUE};
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: ${FONT_SIZES.BIG};
+    font-size: ${FontSizes.BIG};
     font-weight: bold;
 `
 
 export const Inquiry = styled.h2`
-    font-size: ${FONT_SIZES.H2};
-    color: ${WHITE};
+    font-size: ${FontSizes.LARGE};
+    color: ${Colors.WHITE};
+    margin: 0 auto;
 `
 
 export const Description = styled.p`
-    font-size: ${FONT_SIZES.REGULAR};
+    font-size: ${FontSizes.SMALL};
+    margin-top: 15px;
 `

@@ -1,11 +1,11 @@
-export enum FONT_SIZES {
+export enum FontSizes {
+    EXTRA_SMALL = '0.75em',
     SMALL = '0.875em',
     REGULAR = '1em',
     BIG = '1.2em',
-    BIGGER = '1.5em',
-    H1 = '2.5em',
-    H2 = '2em',
-    H3 = '1.75em',
-    H4 = '1.5em',
-    H5 = '1.25em'
+    LARGE = '1.5em',
+    EXTRA_LARGE = '1.75em',
+    GIANT = '2.0em',
+    JUMBO = '2.25em',
+    ASTRONOMICAL = '2.5em'
 }

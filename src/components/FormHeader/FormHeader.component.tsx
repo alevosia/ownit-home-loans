@@ -1,27 +1,23 @@
 import React from 'react'
 
-import {
-    FormHeaderWrapper,
-    QuestionIdWrapper,
-    QuestionId,
-    Inquiry,
-    Description
-} from './FormHeader.styles'
+import { Wrapper, QuestionIdWrapper, QuestionId, Inquiry, Description } from './FormHeader.styles'
 interface Props {
-    id: string
+    id?: string
     inquiry: string
     description?: string
 }
 
 const FormHeader: React.FC<Props> = ({ id, inquiry, description }) => {
     return (
-        <FormHeaderWrapper>
-            <QuestionIdWrapper>
-                <QuestionId>{id}</QuestionId>
-            </QuestionIdWrapper>
+        <Wrapper id="FormHeader">
+            {id !== undefined && (
+                <QuestionIdWrapper>
+                    <QuestionId>{id}</QuestionId>
+                </QuestionIdWrapper>
+            )}
             <Inquiry>{inquiry}</Inquiry>
-            {description && <Description>{description}</Description>}
-        </FormHeaderWrapper>
+            {description !== undefined && <Description>{description}</Description>}
+        </Wrapper>
     )
 }
 

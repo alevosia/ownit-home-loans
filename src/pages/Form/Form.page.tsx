@@ -1,16 +1,16 @@
 import React from 'react'
 
-import { FormPageWrapper, FormWrapper } from './Form.styles'
+import { Wrapper } from './Form.styles'
 
+import Navigation from '../../components/Navigation/Navigation.component'
 import Form from '../../components/Form/Form.component'
 
 const FormPage: React.FC = () => {
     return (
-        <FormPageWrapper id="FormPage">
-            <FormWrapper>
-                <Form />
-            </FormWrapper>
-        </FormPageWrapper>
+        <Wrapper id="FormPage">
+            <Navigation />
+            <Form />
+        </Wrapper>
     )
 }
 

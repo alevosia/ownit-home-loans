@@ -1,20 +1,56 @@
 import styled from 'styled-components'
 
-import { DARK_BLUE, FONT_SIZES } from '../../constants'
+import { Colors, FontSizes } from '../../constants'
 
 export const Wrapper = styled.div`
+    position: relative;
     height: auto;
     width: auto;
-    background-color: ${DARK_BLUE};
-    padding: 15px 25px;
+    background-color: ${Colors.DARK_BLUE};
+    padding: 10px;
+    margin-bottom: 15px;
     border-radius: 5px;
 `
 
 export const Input = styled.input`
-    font-weight: bold;
-    color: ${DARK_BLUE};
-    font-size: ${FONT_SIZES.BIG};
-    padding: 5px 10px;
+    height: auto;
+    width: 100%;
+    font-weight: normal;
+    background-color: ${Colors.DARK_BLUE};
+    color: ${Colors.WHITE};
+    font-size: ${FontSizes.BIG};
     border: none;
     outline: none;
+    text-align: center;
+    letter-spacing: 2px;
+
+    /* Hide arrows on nmber inputs */
+    /* Chrome, Safari, Edge, Opera */
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    -moz-appearance: textfield;
+    /* ENDOF Hide arrows on nmber inputs */
+
+    &::placeholder {
+        color: ${Colors.WHITE};
+        opacity: 0.75;
+    }
+`
+
+export const IncrementButton = styled.button`
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 3px;
+    font-size: ${FontSizes.ASTRONOMICAL};
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0 10px;
+    color: ${Colors.WHITE};
 `

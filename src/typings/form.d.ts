@@ -28,7 +28,12 @@ interface InputField {
     id: string
     name: string
     type: 'text' | 'email' | 'number' | 'password'
+    defaultValue?: string | number
     placeholder?: string
+    min?: number
+    max?: number
+    incrementBy?: number
+    required?: boolean
 }
 
 interface Responses {
