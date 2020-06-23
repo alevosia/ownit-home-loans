@@ -6,7 +6,7 @@ import { ReactComponent as ArrowLeft } from '../../assets/arrow-left-solid.svg'
 export const Wrapper = styled.div`
     width: 100%;
     max-width: 768px;
-    margin: 20% auto 0 auto;
+    margin: 15% auto 0 auto;
 
     @media only screen and (min-width: ${Breakpoints.TABLET}px) {
         margin: 10% auto 0 auto;
