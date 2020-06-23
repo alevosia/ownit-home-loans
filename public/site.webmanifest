@@ -3,16 +3,17 @@
     "short_name": "OWNit Home Loans",
     "icons": [
         {
-            "src": "/android-chrome-192x192.png",
+            "src": "/wp-content/themes/reactive/android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/android-chrome-512x512.png",
+            "src": "/wp-content/themes/reactive/android-chrome-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
         }
     ],
+    "start_url": ".",
     "theme_color": "#0093D7",
     "background_color": "#FFFFFF",
     "display": "standalone"
