@@ -81,49 +81,33 @@ export const QUESTIONS: Question[] = [
     },
     {
         id: '8',
+        type: 'CHOICES',
+        inquiry: 'When do you receive your salary?',
+        choices: [
+            { id: 'A', value: 'Weekly' },
+            { id: 'B', value: 'Fortnightly' },
+            { id: 'C', value: 'Monthly' },
+            { id: 'D', value: 'Annually' }
+        ]
+    },
+    {
+        id: '9',
         type: 'INPUT',
-        inquiry: 'What is your salary?',
+        inquiry: 'How much?',
         inputFields: [
             {
-                id: 'weekly',
-                name: 'weekly',
-                placeholder: 'Weekly Salary',
-                type: 'text',
-                money: true,
-                incrementBy: 100,
-                min: 0
-            },
-            {
-                id: 'fortnightly',
-                name: 'fortnightly',
-                placeholder: 'Fortnightly Salary',
+                id: 'salary',
+                name: 'salary',
+                placeholder: 'Salary',
                 type: 'text',
                 money: true,
                 incrementBy: 1000,
-                min: 0
-            },
-            {
-                id: 'monthly',
-                name: 'monthly',
-                placeholder: 'Monthly Salary',
-                type: 'text',
-                money: true,
-                incrementBy: 5000,
-                min: 0
-            },
-            {
-                id: 'annual',
-                name: 'annual',
-                placeholder: 'Annual Salary',
-                type: 'text',
-                money: true,
-                incrementBy: 25000,
                 min: 0
             }
         ]
     },
     {
-        id: '9',
+        id: '10',
         type: 'INPUT',
         inquiry: 'Personal Information',
         inputFields: [
