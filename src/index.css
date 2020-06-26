@@ -4,17 +4,23 @@
     padding: 0;
 }
 
-html, body, #root {
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
     height: 100%;
     width: 100%;
 }
 
-body, #root {
-    overflow-x: hidden;
-}
-
 body {
+    overflow-x: hidden;
     font-family: Arial, Helvetica, sans-serif;
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
+}
+
+#root {
+    height: 100%;
+    width: 100%;
 }

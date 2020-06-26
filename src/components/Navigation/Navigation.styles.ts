@@ -1,27 +1,60 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import { Colors, FontSizes, Breakpoints } from '../../constants'
 
-export const Wrapper = styled.div`
-    height: 50px;
+interface WrapperProps {
+    readonly fixed?: boolean
+    readonly transparent: boolean
+}
+
+export const NAVIGATION_HEIGHT = '60px'
+
+const FixedStyles = css`
+    position: fixed;
+    top: 0;
+    left: 0;
+`
+
+export const Wrapper = styled.div<WrapperProps>`
+    height: ${NAVIGATION_HEIGHT};
     width: 100%;
-    padding: 0px 15px;
-    box-shadow: 0px -5px 10px black;
+    padding: 0 10px;
+    background: ${({ transparent }) => (transparent ? 'transparent' : Colors.WHITE)};
+    box-shadow: ${({ transparent }) => (transparent ? 'none' : '0px -5px 10px black')};
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    ${({ fixed }) => fixed && FixedStyles}
+
+    @media only screen and (min-width: ${Breakpoints.PHONE}px) {
+        padding: 10px 10px 0 10px;
+    }
+
+    @media only screen and (min-width: ${Breakpoints.TABLET}px) {
+        padding: 15px 20px 0 20px;
+    }
+
+    @media only screen and (min-width: ${Breakpoints.DESKTOP}px) {
+        padding: 15px 30px 0 30px;
+        height: 70px;
+    }
 `
 
 export const LogoWrapper = styled.div`
-    max-width: 120px;
+    max-width: 80px;
     height: 100%;
     margin-right: 10px;
 
     img {
         height: 100%;
-        width: 100%;
-        vertical-align: middle;
+        max-width: 100%;
+        object-fit: contain;
+    }
+
+    @media only screen and (min-width: ${Breakpoints.TABLET}px) {
+        max-width: 120px;
     }
 `
 
@@ -40,14 +73,14 @@ export const Link = styled.a`
     text-decoration: none;
 
     &:not(:last-child) {
-        margin-right: 10px;
+        margin-right: 15px;
     }
 
     @media only screen and (min-width: ${Breakpoints.PHONE}px) {
         font-size: ${FontSizes.REGULAR};
 
         &:not(:last-child) {
-            margin-right: 15px;
+            margin-right: 20px;
         }
     }
 
@@ -59,7 +92,7 @@ export const Link = styled.a`
 
     @media only screen and (min-width: ${Breakpoints.DESKTOP}px) {
         &:not(:last-child) {
-            margin-right: 45px;
+            margin-right: 60px;
         }
     }
 `
