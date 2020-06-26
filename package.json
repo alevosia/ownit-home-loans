@@ -20,14 +20,16 @@
 	},
 	"scripts": {
 		"start": "react-scripts start",
-		"build": "npm run delete-build && react-scripts build && npm run convert-index-to-php && npm run copy-theme-files",
+		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"lint": "eslint .",
 		"lint:fix": "eslint . --fix",
-		"delete-build": "rimraf -rf build",
-		"convert-index-to-php": "mv build/index.html build/index.php",
-		"copy-theme-files": "cp wp-theme/* build"
+		"delete:build": "rimraf -rf build",
+		"prebuild": "npm run delete:build",
+		"postbuild": "npm run convert-index && npm run copy-theme",
+		"convert-index": "mv build/index.html build/index.php",
+		"copy-theme": "cp wp-theme/* build"
 	},
 	"browserslist": {
 		"production": [
