@@ -14,6 +14,7 @@ const centeredStyles = css`
 `
 
 export default styled.section<Props>`
+    position: -2;
     height: ${({ height }) => height || 'auto'};
     width: ${({ width }) => width || 'auto'};
     display: ${({ flexed }) => flexed && 'flex'};

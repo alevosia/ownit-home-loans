@@ -16,6 +16,7 @@ const FixedStyles = css`
 `
 
 export const Wrapper = styled.div<WrapperProps>`
+    z-index: 10;
     height: ${NAVIGATION_HEIGHT};
     width: 100%;
     padding: 0 10px;
