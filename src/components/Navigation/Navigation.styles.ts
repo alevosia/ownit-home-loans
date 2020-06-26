@@ -32,7 +32,7 @@ export const LinksWrapper = styled.div`
 
 export const Link = styled.a`
     color: ${Colors.LIGHT_BLUE};
-    font-size: ${FontSizes.REGULAR};
+    font-size: ${FontSizes.SMALL};
     font-weight: bold;
     letter-spacing: 1px;
     word-spacing: 3px;
@@ -44,6 +44,8 @@ export const Link = styled.a`
     }
 
     @media only screen and (min-width: ${Breakpoints.PHONE}px) {
+        font-size: ${FontSizes.REGULAR};
+
         &:not(:last-child) {
             margin-right: 15px;
         }
