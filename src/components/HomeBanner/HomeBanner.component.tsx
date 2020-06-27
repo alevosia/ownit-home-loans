@@ -1,17 +1,35 @@
 import React from 'react'
 
+// assets
+import HomeKeys from '../../assets/home_keys.jpeg'
+
+// components
 import Section from '../Section'
 import FullBackground from '../FullBackground'
 
-const bgImageUrl =
-    'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/' +
-    'suburban-house-royalty-free-image-1584972559.jpg'
+// bootstrap
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
+import Container from 'react-bootstrap/Container'
+
+// styles
+import { Heading, LinkButton } from './HomeBanner.styles'
 
 const HomeBanner: React.FC = () => {
     return (
         <Section flexed={true} direction="column" centered={true} height="100%" id="HomeBanner">
-            <FullBackground imageUrl={bgImageUrl} size="cover" fixed={true} blur="3px" />
-            <h1>Home Banner</h1>
+            <FullBackground imageUrl={HomeKeys} size="cover" fixed={true} blur="3px" />
+            <Container>
+                <Row>
+                    <Col className="d-none d-md-block"></Col>
+                    <Col className="text-center text-md-left">
+                        <Heading className="mb-5">
+                            Learn how to home loan the <strong>smart way</strong>.
+                        </Heading>
+                        <LinkButton href="#about">KNOW MORE</LinkButton>
+                    </Col>
+                </Row>
+            </Container>
         </Section>
     )
 }

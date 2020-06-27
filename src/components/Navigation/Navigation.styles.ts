@@ -15,55 +15,6 @@ const FixedStyles = css`
     left: 0;
 `
 
-export const Wrapper = styled.div<WrapperProps>`
-    z-index: 10;
-    height: ${NAVIGATION_HEIGHT};
-    width: 100%;
-    padding: 0 10px;
-    background: ${({ transparent }) => (transparent ? 'transparent' : Colors.WHITE)};
-    box-shadow: ${({ transparent }) => (transparent ? 'none' : '0px -5px 10px black')};
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    ${({ fixed }) => fixed && FixedStyles}
-
-    @media only screen and (min-width: ${Breakpoints.PHONE}px) {
-        padding: 10px 10px 0 10px;
-    }
-
-    @media only screen and (min-width: ${Breakpoints.TABLET}px) {
-        padding: 15px 20px 0 20px;
-    }
-
-    @media only screen and (min-width: ${Breakpoints.DESKTOP}px) {
-        padding: 15px 30px 0 30px;
-        height: 70px;
-    }
-`
-
-export const LogoWrapper = styled.div`
-    max-width: 80px;
-    height: 100%;
-    margin-right: 10px;
-
-    img {
-        height: 100%;
-        max-width: 100%;
-        object-fit: contain;
-    }
-
-    @media only screen and (min-width: ${Breakpoints.TABLET}px) {
-        max-width: 120px;
-    }
-`
-
-export const LinksWrapper = styled.div`
-    width: auto;
-    height: auto;
-`
-
 export const Link = styled.a`
     color: ${Colors.LIGHT_BLUE};
     font-size: ${FontSizes.SMALL};
@@ -86,6 +37,8 @@ export const Link = styled.a`
     }
 
     @media only screen and (min-width: ${Breakpoints.TABLET}px) {
+        font-size: ${FontSizes.BIG};
+
         &:not(:last-child) {
             margin-right: 30px;
         }
@@ -96,4 +49,57 @@ export const Link = styled.a`
             margin-right: 60px;
         }
     }
+`
+
+export const Wrapper = styled.div<WrapperProps>`
+    z-index: 10;
+    height: ${NAVIGATION_HEIGHT};
+    width: 100%;
+    padding: 0 10px;
+    background: ${({ transparent }) => (transparent ? 'transparent' : Colors.WHITE)};
+    box-shadow: ${({ transparent }) => (transparent ? 'none' : '0px -5px 10px black')};
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    ${({ fixed }) => fixed && FixedStyles}
+
+    ${Link} {
+        color: ${({ transparent }) => (transparent ? Colors.DARK_BLUE : Colors.LIGHT_BLUE)};
+    }
+
+    @media only screen and (min-width: ${Breakpoints.PHONE}px) {
+        padding: 10px 10px 0 10px;
+    }
+
+    @media only screen and (min-width: ${Breakpoints.TABLET}px) {
+        padding: 15px 20px 0 20px;
+    }
+
+    @media only screen and (min-width: ${Breakpoints.DESKTOP}px) {
+        padding: 15px 30px 0 30px;
+        height: 80px;
+    }
+`
+
+export const LogoWrapper = styled.div`
+    max-width: 80px;
+    height: 100%;
+    margin-right: 10px;
+
+    img {
+        height: 100%;
+        max-width: 100%;
+        object-fit: contain;
+    }
+
+    @media only screen and (min-width: ${Breakpoints.TABLET}px) {
+        max-width: 120px;
+    }
+`
+
+export const LinksWrapper = styled.div`
+    width: auto;
+    height: auto;
 `

@@ -11,15 +11,15 @@ interface Props {
 const centeredStyles = css`
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
 `
 
 export default styled.section<Props>`
-    position: -2;
+    position: relative;
     height: ${({ height }) => height || 'auto'};
     width: ${({ width }) => width || 'auto'};
     display: ${({ flexed }) => flexed && 'flex'};
     flex-direction: ${({ direction }) => direction};
-    border: 2px dashed black;
 
     ${({ centered }) => centered && centeredStyles};
 `
