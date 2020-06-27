@@ -34,12 +34,12 @@ const Navigation: React.FC<Props> = ({ fixed, transparent }) => {
     return (
         <Wrapper id="nav" ref={navRef} fixed={fixed} transparent={transparent}>
             <LogoWrapper>
-                <Link href="/">
+                <Link href="/#banner">
                     <img src={Logo} alt="logo" />
                 </Link>
             </LogoWrapper>
             <LinksWrapper>
-                <Link href="/">Home</Link>
+                <Link href="/#banner">Home</Link>
                 <Link href="/form">Form</Link>
                 <Link href="/#footer">Contact</Link>
             </LinksWrapper>
