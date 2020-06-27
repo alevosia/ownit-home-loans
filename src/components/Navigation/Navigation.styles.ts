@@ -57,11 +57,12 @@ export const Wrapper = styled.div<WrapperProps>`
     width: 100%;
     padding: 0 10px;
     background: ${({ transparent }) => (transparent ? 'transparent' : Colors.WHITE)};
-    box-shadow: ${({ transparent }) => (transparent ? 'none' : '0px -5px 10px black')};
+    box-shadow: ${({ transparent }) => (transparent ? 'none' : `0px -5px 10px ${Colors.BLACK}`)};
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: all 0.5s ease-in-out;
 
     ${({ fixed }) => fixed && FixedStyles}
 
@@ -74,12 +75,17 @@ export const Wrapper = styled.div<WrapperProps>`
     }
 
     @media only screen and (min-width: ${Breakpoints.TABLET}px) {
-        padding: 15px 20px 0 20px;
+        padding: 10px 20px 0 20px;
     }
 
     @media only screen and (min-width: ${Breakpoints.DESKTOP}px) {
-        padding: 15px 30px 0 30px;
+        padding: 10px 30px 0 30px;
         height: 80px;
+    }
+
+    &.opaque {
+        background: ${Colors.WHITE + 'AA'};
+        box-shadow: 0px -5px 10px ${Colors.BLACK};
     }
 `
 

@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
-import { Colors, FontSizes } from '../../constants'
+import { Colors, FontSizes, Breakpoints } from '../../constants'
 
 export const Wrapper = styled.footer`
-    padding: 10px;
+    padding: 15px 0;
     height: auto;
     width: 100%;
     text-align: center;
@@ -11,20 +11,21 @@ export const Wrapper = styled.footer`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    .icon {
+        margin: 0 auto 5px auto;
+        display: block;
+        height: 30px;
+        width: 30px;
+        color: ${Colors.DARK_BLUE};
+    }
+
+    @media only screen and (min-width: ${Breakpoints.TABLET}px) {
+        padding: 20px;
+    }
 `
 
-export const Heading = styled.h3`
-    font-size: ${FontSizes.LARGE}px;
-    color: ${Colors.DARK_BLUE};
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 2px;
-`
-
-export const Icon = styled.img`
-    display: block;
-    marign: 0 auto;
-    height: 30px;
-    width: 30px;
+export const Info = styled.span`
+    font-size: ${FontSizes.REGULAR};
     color: ${Colors.DARK_BLUE};
 `

@@ -1,9 +1,9 @@
 import React from 'react'
 
 // assets
-import Telephone from '../../assets/phone-alt-solid.svg'
-import Envelope from '../../assets/envelope-solid.svg'
-import MapMarker from '../../assets/map-marker-alt-solid.svg'
+import { ReactComponent as Telephone } from '../../assets/phone-alt-solid.svg'
+import { ReactComponent as Envelope } from '../../assets/envelope-solid.svg'
+import { ReactComponent as MapMarker } from '../../assets/map-marker-alt-solid.svg'
 
 // bootstrap
 import Container from 'react-bootstrap/Container'
@@ -11,7 +11,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
 // styles
-import { Wrapper, Heading, Icon } from './Footer.styles'
+import { Wrapper, Info } from './Footer.styles'
 
 const Footer: React.FC = () => {
     return (
@@ -19,19 +19,22 @@ const Footer: React.FC = () => {
             <Container>
                 <Row>
                     <Col>
-                        <Heading>Contact Us</Heading>
                         <Row>
-                            <Col>
-                                <Icon src={Telephone} />
-                                1300 553 750
+                            <Col xs={12} md={{ span: 4, order: 1 }} className="mb-3 mb-md-0">
+                                <MapMarker className="icon" />
+                                <Info>
+                                    OWNit Conveyancing Beenleigh 71 Alamein Street Beenleigh QLD
+                                    4207
+                                </Info>
                             </Col>
-                            <Col>
-                                <Icon src={Envelope} />
-                                info@ownit.com.au
+                            <Col xs={6} md={{ span: 4, order: 0 }}>
+                                <Telephone className="icon" />
+                                <Info>1300 553 750</Info>
                             </Col>
-                            <Col>
-                                <Icon src={MapMarker} />
-                                OWNit Conveyancing Beenleigh 71 Alamein Street Beenleigh QLD 4207
+
+                            <Col xs={6} md={{ span: 4, order: 2 }}>
+                                <Envelope className="icon" />
+                                <Info>info@ownit.com.au</Info>
                             </Col>
                         </Row>
                     </Col>
