@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-
+import { NavHashLink } from 'react-router-hash-link'
 import { Colors, FontSizes, Breakpoints } from '../../constants'
 
 interface WrapperProps {
@@ -15,7 +15,8 @@ const FixedStyles = css`
     left: 0;
 `
 
-export const Link = styled.a`
+export const NavLink = styled(NavHashLink)`
+    position: relative;
     color: ${Colors.LIGHT_BLUE};
     font-size: ${FontSizes.SMALL};
     font-weight: bold;
@@ -26,6 +27,32 @@ export const Link = styled.a`
 
     &:not(:last-child) {
         margin-right: 15px;
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    &::before {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: ${Colors.DARK_BLUE};
+        left: 0;
+        bottom: -5px;
+        transform-origin: left;
+        transform: scale(0);
+        transition: 0.25s linear;
+    }
+
+    &#logo::before {
+        display: none;
+    }
+
+    &:hover:before {
+        transform: scale(1);
     }
 
     @media only screen and (min-width: ${Breakpoints.PHONE}px) {
@@ -66,7 +93,7 @@ export const Wrapper = styled.div<WrapperProps>`
 
     ${({ fixed }) => fixed && FixedStyles}
 
-    ${Link} {
+    ${NavLink} {
         color: ${({ transparent }) => (transparent ? Colors.DARK_BLUE : Colors.LIGHT_BLUE)};
     }
 

@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react'
 
-import { Wrapper, LogoWrapper, LinksWrapper, Link } from './Navigation.styles'
+import { Wrapper, LogoWrapper, LinksWrapper, NavLink } from './Navigation.styles'
 
 import Logo from '../../assets/logo.png'
 
@@ -34,14 +34,14 @@ const Navigation: React.FC<Props> = ({ fixed, transparent }) => {
     return (
         <Wrapper id="nav" ref={navRef} fixed={fixed} transparent={transparent}>
             <LogoWrapper>
-                <Link href="/#banner">
+                <NavLink to="/#banner" id="logo">
                     <img src={Logo} alt="logo" />
-                </Link>
+                </NavLink>
             </LogoWrapper>
             <LinksWrapper>
-                <Link href="/#banner">Home</Link>
-                <Link href="/form">Form</Link>
-                <Link href="/#footer">Contact</Link>
+                <NavLink to="/#banner">Home</NavLink>
+                <NavLink to="/form">Form</NavLink>
+                <NavLink to="/#footer">Contact</NavLink>
             </LinksWrapper>
         </Wrapper>
     )
