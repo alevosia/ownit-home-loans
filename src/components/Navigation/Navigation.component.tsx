@@ -13,22 +13,15 @@ const Navigation: React.FC<Props> = ({ fixed, transparent }) => {
     const navRef = useRef<HTMLDivElement | null>(null)
 
     useEffect(() => {
-        if (navRef && navRef.current) {
-            window.addEventListener('scroll', function () {
-                if (navRef && navRef.current) {
-                    if (
-                        window.scrollY >
-                        navRef?.current?.offsetTop + navRef?.current?.offsetHeight
-                    ) {
-                        console.log('Past!')
-                        navRef.current.classList.add('opaque')
-                    } else {
-                        console.log('Nope!')
-                        navRef.current.classList.remove('opaque')
-                    }
+        window.addEventListener('scroll', function () {
+            if (navRef && navRef.current) {
+                if (window.scrollY > navRef?.current?.offsetTop + navRef?.current?.offsetHeight) {
+                    navRef.current.classList.add('opaque')
+                } else {
+                    navRef.current.classList.remove('opaque')
                 }
-            })
-        }
+            }
+        })
     }, [])
 
     return (
