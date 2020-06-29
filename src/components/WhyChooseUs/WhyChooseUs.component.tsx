@@ -47,9 +47,13 @@ const WhyChooseUs: React.FC = () => {
                             </Col>
                             <Col className="flex-grow-0 flex-md-grow-1">
                                 <Mission className="mt-md-3 mt-lg-5">
-                                    The professionals at OWNit offer services for property
-                                    conveyancing works at some of the cheapest prices in both the
-                                    Gold Coast and Brisbane.
+                                    Our focus is you, our client, where we will deliver a
+                                    professional service and provide you with the peace of mind
+                                    throughout the home loan purpose.
+                                </Mission>
+                                <Mission className="mt-3 mt-lg-5">
+                                    Our drive is to provide you with superior service and to “make
+                                    your dreams come true”.
                                 </Mission>
                             </Col>
                         </Row>

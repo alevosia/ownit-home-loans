@@ -66,7 +66,7 @@ export const Heading = styled.h2`
 export const Mission = styled.p`
     position: relative;
     color: ${Colors.RED};
-    font-size: ${FontSizes.BIG};
+    font-size: ${FontSizes.REGULAR};
     margin-bottom: 0;
 
     &::before {
@@ -85,6 +85,10 @@ export const Mission = styled.p`
     }
 
     @media only screen and (min-width: ${Breakpoints.DESKTOP}px) {
+        font-size: ${FontSizes.BIG};
+    }
+
+    @media only screen and (min-width: ${Breakpoints.WIDE_DESKTOP}px) {
         font-size: ${FontSizes.LARGE};
     }
 `

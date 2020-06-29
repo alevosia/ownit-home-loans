@@ -7,13 +7,20 @@ import InputField from '../InputField/InputField.component'
 
 interface Props {
     question: Question
+    responses: Responses
     onChoiceSelectHandler: (question: Question, choice: Choice) => void
     onInputBlurHandler: (event: React.FocusEvent<HTMLInputElement>, inputField: InputField) => void
     nextQuestionHandler: (event: React.FormEvent<HTMLFormElement>) => void
 }
 
+interface CFormHeaderProps {
+    question: Question
+    responses: Responses
+}
+
 const FormQuestion: React.FC<Props> = ({
     question,
+    responses,
     onChoiceSelectHandler,
     onInputBlurHandler,
     nextQuestionHandler
@@ -23,15 +30,26 @@ const FormQuestion: React.FC<Props> = ({
         nextQuestionHandler(event)
     }
 
+    const CFormHeader: React.FC<CFormHeaderProps> = ({ question, responses }) => {
+        let inquiry = question.inquiry
+
+        if (question.id === '9') {
+            const interval = responses['8'].value
+
+            if (interval === 'Annually') {
+                inquiry = 'How much is your annual salary?'
+            } else {
+                inquiry = `How much is your ${interval.toLowerCase()} salary?`
+            }
+        }
+
+        return <FormHeader id={question.id} inquiry={inquiry} description={question.description} />
+    }
+
     // Renders multiple choices or input fields depending on the question type
     return (
         <Wrapper>
-            <FormHeader
-                id={question.id}
-                inquiry={question.inquiry}
-                description={question.description}
-            />
-
+            <CFormHeader question={question} responses={responses} />
             <FormBody onSubmit={handleSubmit}>
                 {question.type === 'CHOICES' ? (
                     <FlexColumn>

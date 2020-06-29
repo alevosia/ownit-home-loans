@@ -9,7 +9,15 @@ export const Wrapper = styled.div`
     margin: 0;
 
     @media only screen and (min-width: ${Breakpoints.PHONE}px) {
+        margin: 15% auto 0 auto;
+    }
+
+    @media only screen and (min-width: ${Breakpoints.TABLET}px) {
         margin: 10% auto 0 auto;
+    }
+
+    @media only screen and (min-width: ${Breakpoints.DESKTOP}px) {
+        margin: 5% auto 0 auto;
     }
 `
 

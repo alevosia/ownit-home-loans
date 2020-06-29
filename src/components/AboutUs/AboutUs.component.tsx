@@ -45,9 +45,14 @@ const AboutUs: React.FC = () => {
                             </Col>
                             <Col className="flex-grow-0 flex-md-grow-1">
                                 <Mission className="mt-md-3 mt-lg-5">
-                                    Our mission through great customer service and strong industry
-                                    relationships is to create raving fans. We work personally with
-                                    each and every client to find loan for them.
+                                    Ownit Home Loans was established to meet the expectations of
+                                    home buyers. For too long have we heard the angst of home buyers
+                                    struggling with the home loan.
+                                </Mission>
+                                <Mission className="mt-3 mt-lg-5">
+                                    We understand that purchasing your first or even your third home
+                                    is an emotional roller coaster, after all for most of us it is
+                                    the biggest financial decision of our entire life.
                                 </Mission>
                             </Col>
                         </Row>

@@ -8,17 +8,19 @@ interface Props {
 }
 
 const InputField: React.FC<Props> = ({
-    inputField: { id, name, type, money, placeholder, defaultValue, min, max, incrementBy },
+    inputField: { id, name, type, money, placeholder, min, max, incrementBy },
     onBlurHandler
 }) => {
     const inputRef = useRef<HTMLInputElement>(null)
 
-    // Set the input field's value to the default at mount of component
+    // Focus on the input field upon first render except if it's email or contact
     useEffect(() => {
-        if (defaultValue != null && inputRef && inputRef.current) {
-            inputRef.current.value = defaultValue.toString()
+        if (name === 'email' || name === 'contact') return
+
+        if (inputRef && inputRef.current) {
+            inputRef.current.focus()
         }
-    }, [defaultValue])
+    }, [name])
 
     // Triggers everytime the input value has changed
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {

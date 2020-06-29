@@ -15,7 +15,7 @@ export const Wrapper = styled.div`
 export const DollarSign = styled.span`
     position: absolute;
     left: 15px;
-    top: 6px;
+    top: 10px;
     color: ${Colors.WHITE};
     font-size: ${FontSizes.BIG};
 `
@@ -51,6 +51,7 @@ export const Input = styled.input`
 `
 
 export const IncrementButton = styled.button`
+    height: 50px;
     cursor: pointer;
     position: absolute;
     top: 0;
@@ -61,4 +62,6 @@ export const IncrementButton = styled.button`
     outline: none;
     padding: 0 10px;
     color: ${Colors.WHITE};
+    display: inline-flex;
+    align-items: center;
 `
