@@ -115,8 +115,6 @@ const Form: React.FC = () => {
             message += `<strong>${responses[key].inquiry}</strong><br>${responses[key].value}<br><br>`
         }
 
-        console.log(name, email, message)
-
         const response = await sendEmail(name, email, message)
 
         setFormState({
@@ -139,14 +137,13 @@ const Form: React.FC = () => {
     // This effect checks if index is greater than or equal to the questions' length
     // if yes, set 'submitting' property of formState to true which triggers the effect above
     useEffect(() => {
-        console.log(responses)
         if (index >= QUESTIONS.length && !submitting && !submitted) {
             setFormState((prevState) => ({
                 ...prevState,
                 submitting: true
             }))
         }
-    }, [index, submitted, submitting, responses])
+    }, [index, submitted, submitting])
 
     // Renders the form if formState is NOT yet submitted and there is still a question,
     // else renders error, submitting, sent or failed
