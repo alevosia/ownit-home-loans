@@ -32,7 +32,7 @@
 		"lint": "eslint . --ext .js,.jsx,.ts,.tsx",
 		"lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
 		"delete:build": "rimraf -rf build",
-		"prebuild": "npm run delete:build",
+		"prebuild": "npm run lint:fix && npm run delete:build",
 		"postbuild": "npm run convert-index && npm run copy-theme",
 		"convert-index": "mv build/index.html build/index.php",
 		"copy-theme": "cp wp-theme/* build"
