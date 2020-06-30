@@ -1,8 +1,11 @@
 import React, { useRef, useEffect } from 'react'
+import { NavHashLink } from 'react-router-hash-link'
 
-import { Wrapper, LogoWrapper, LinksWrapper, NavLink } from './Navigation.styles'
-
+// assets
 import Logo from '../../assets/logo.png'
+
+// styles
+import { Wrapper, LogoWrapper, LinksWrapper, NavLink } from './Navigation.styles'
 
 interface Props {
     fixed?: boolean
@@ -27,9 +30,9 @@ const Navigation: React.FC<Props> = ({ fixed, transparent }) => {
     return (
         <Wrapper id="nav" ref={navRef} fixed={fixed} transparent={transparent}>
             <LogoWrapper>
-                <NavLink to="/#banner" id="logo">
+                <NavHashLink to="/#banner" id="logo" style={{ marginLeft: '0px' }}>
                     <img src={Logo} alt="logo" />
-                </NavLink>
+                </NavHashLink>
             </LogoWrapper>
             <LinksWrapper>
                 <NavLink to="/#banner">Home</NavLink>

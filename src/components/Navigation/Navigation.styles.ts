@@ -7,12 +7,20 @@ interface WrapperProps {
     readonly transparent: boolean
 }
 
-export const NAVIGATION_HEIGHT = '60px'
+export const NAVIGATION_HEIGHT = '70px'
 
 const FixedStyles = css`
     position: fixed;
     top: 0;
     left: 0;
+`
+
+export const LinksWrapper = styled.div`
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 `
 
 export const NavLink = styled(NavHashLink)`
@@ -24,11 +32,7 @@ export const NavLink = styled(NavHashLink)`
     letter-spacing: 1px;
     text-transform: uppercase;
     text-decoration: none;
-    margin-left: 15px;
-
-    &:hover {
-        text-decoration: none;
-    }
+    margin-left: 20px;
 
     &::before {
         position: absolute;
@@ -44,8 +48,8 @@ export const NavLink = styled(NavHashLink)`
         transition: 0.25s linear;
     }
 
-    &#logo::before {
-        display: none;
+    &:hover {
+        text-decoration: none;
     }
 
     &:hover:before {
@@ -53,15 +57,12 @@ export const NavLink = styled(NavHashLink)`
     }
 
     @media only screen and (min-width: ${Breakpoints.PHONE}px) {
-        margin-left: unset;
+        margin-left: 30px;
         font-size: ${FontSizes.REGULAR};
-
-        &:not(:last-child) {
-            margin-right: 20px;
-        }
     }
 
     @media only screen and (min-width: ${Breakpoints.TABLET}px) {
+        margin-left: unset;
         font-size: ${FontSizes.BIG};
 
         &:not(:last-child) {
@@ -105,7 +106,6 @@ export const Wrapper = styled.nav<WrapperProps>`
 
     @media only screen and (min-width: ${Breakpoints.DESKTOP}px) {
         padding: 10px 30px 0 30px;
-        height: 80px;
     }
 
     &.opaque {
@@ -115,7 +115,6 @@ export const Wrapper = styled.nav<WrapperProps>`
 `
 
 export const LogoWrapper = styled.div`
-    max-width: 80px;
     height: 100%;
     margin-right: 10px;
 
@@ -128,9 +127,4 @@ export const LogoWrapper = styled.div`
     @media only screen and (min-width: ${Breakpoints.TABLET}px) {
         max-width: 120px;
     }
-`
-
-export const LinksWrapper = styled.div`
-    width: auto;
-    height: auto;
 `
