@@ -49,7 +49,7 @@ const AboutUs: React.FC = () => {
                                     home buyers. For too long have we heard the angst of home buyers
                                     struggling with the home loan.
                                 </Mission>
-                                <Mission className="mt-3 mt-lg-5">
+                                <Mission className="mt-3">
                                     We understand that purchasing your first or even your third home
                                     is an emotional roller coaster, after all for most of us it is
                                     the biggest financial decision of our entire life.

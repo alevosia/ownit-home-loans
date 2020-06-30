@@ -13,7 +13,7 @@ import Row from 'react-bootstrap/Row'
 import Container from 'react-bootstrap/Container'
 
 // styles
-import { Heading, LinkButton } from './HomeBanner.styles'
+import { Heading, LinksWrapper, LinkButton } from './HomeBanner.styles'
 
 const HomeBanner: React.FC = () => {
     return (
@@ -24,9 +24,14 @@ const HomeBanner: React.FC = () => {
                     <Col className="d-none d-md-block"></Col>
                     <Col className="text-center text-md-left">
                         <Heading className="mb-5">
-                            Learn how to home loan the <strong>smart way</strong>.
+                            We are here to help you... <strong>OWNit</strong>
                         </Heading>
-                        <LinkButton href="#about">KNOW MORE</LinkButton>
+                        <LinksWrapper>
+                            <LinkButton href="#FirstTimeBuyer">FIRST TIME BUYER</LinkButton>
+                            <LinkButton href="#Upgrading">UPGRADING</LinkButton>
+                            <LinkButton href="#Refinancing">REFINANCING</LinkButton>
+                            <LinkButton href="#Investing">INVESTING</LinkButton>
+                        </LinksWrapper>
                     </Col>
                 </Row>
             </Container>

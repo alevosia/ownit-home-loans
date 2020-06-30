@@ -1,6 +1,8 @@
 import React from 'react'
 
 // assets
+import FBAA from '../../assets/FBAA.png'
+// assets
 import { ReactComponent as Telephone } from '../../assets/phone-alt-solid.svg'
 import { ReactComponent as Envelope } from '../../assets/envelope-solid.svg'
 import { ReactComponent as MapMarker } from '../../assets/map-marker-alt-solid.svg'
@@ -11,7 +13,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
 // styles
-import { Wrapper, Info } from './Footer.styles'
+import { Wrapper, Info, FooterImageWrapper } from './Footer.styles'
 
 const Footer: React.FC = () => {
     return (
@@ -37,6 +39,9 @@ const Footer: React.FC = () => {
                                 <Info>info@ownit.com.au</Info>
                             </Col>
                         </Row>
+                        <FooterImageWrapper>
+                            <img src={FBAA} alt="FBAA logo" />
+                        </FooterImageWrapper>
                     </Col>
                 </Row>
             </Container>

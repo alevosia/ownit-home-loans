@@ -16,18 +16,15 @@ const FixedStyles = css`
 `
 
 export const NavLink = styled(NavHashLink)`
+    display: inline-block;
     position: relative;
     color: ${Colors.LIGHT_BLUE};
     font-size: ${FontSizes.SMALL};
     font-weight: bold;
     letter-spacing: 1px;
-    word-spacing: 3px;
     text-transform: uppercase;
     text-decoration: none;
-
-    &:not(:last-child) {
-        margin-right: 15px;
-    }
+    margin-left: 15px;
 
     &:hover {
         text-decoration: none;
@@ -56,6 +53,7 @@ export const NavLink = styled(NavHashLink)`
     }
 
     @media only screen and (min-width: ${Breakpoints.PHONE}px) {
+        margin-left: unset;
         font-size: ${FontSizes.REGULAR};
 
         &:not(:last-child) {
@@ -78,7 +76,7 @@ export const NavLink = styled(NavHashLink)`
     }
 `
 
-export const Wrapper = styled.div<WrapperProps>`
+export const Wrapper = styled.nav<WrapperProps>`
     z-index: 10;
     height: ${NAVIGATION_HEIGHT};
     width: 100%;

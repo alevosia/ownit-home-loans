@@ -11,6 +11,7 @@ export const Wrapper = styled.footer`
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow-x: hidden;
 
     .icon {
         margin: 0 auto 5px auto;
@@ -28,4 +29,16 @@ export const Wrapper = styled.footer`
 export const Info = styled.span`
     font-size: ${FontSizes.REGULAR};
     color: ${Colors.DARK_BLUE};
+`
+
+export const FooterImageWrapper = styled.div`
+    width: 200px;
+    height: auto;
+    margin: 10px auto 0 auto;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
 `

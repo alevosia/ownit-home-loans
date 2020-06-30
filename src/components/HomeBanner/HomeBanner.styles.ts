@@ -17,20 +17,49 @@ export const Heading = styled.h2`
     }
 `
 
+export const LinksWrapper = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+`
+
 export const LinkButton = styled.a`
-    font-size: ${FontSizes.BIG};
+    display: inline-block;
+    font-size: ${FontSizes.REGULAR};
     color: ${Colors.WHITE};
-    padding: 10px 30px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
     border-radius: 5px;
     background-color: ${Colors.DARK_BLUE};
     text-transform: uppercase;
     text-decoration: none;
+    text-align: center;
     letter-spacing: 2px;
     font-weight: bold;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 
     &:hover {
         color: ${Colors.WHITE};
         text-decoration: none;
-        background-color: ${Colors.DARK_BLUE + '99'};
+        background-color: ${Colors.DARK_BLUE + 'CC'};
+    }
+
+    @media only screen and (min-width: ${Breakpoints.TABLET}px) {
+        width: 300px;
+        padding: 10px 30px;
+    }
+
+    @media only screen and (min-width: ${Breakpoints.DESKTOP}px) {
+        width: 49%;
+        padding: 10px 30px;
+
+        &:first-child {
+            font-size: 14px;
+        }
     }
 `
