@@ -115,16 +115,29 @@ const Form: React.FC = () => {
             message += `<strong>${responses[key].inquiry}</strong><br>${responses[key].value}<br><br>`
         }
 
-        const response = await sendEmail(name, email, message)
+        try {
+            const response = await sendEmail(name, email, message)
 
-        setFormState({
-            index: 0,
-            submitted: true,
-            submitting: false,
-            sent: response.sent,
-            error: response.sent ? null : new Error(response.message),
-            responses: {}
-        })
+            setFormState({
+                index: 0,
+                submitted: true,
+                submitting: false,
+                sent: response.sent,
+                error: response.sent ? null : new Error(response.message),
+                responses: {}
+            })
+        } catch (exc) {
+            console.error(exc)
+
+            setFormState({
+                index: 0,
+                submitted: true,
+                submitting: false,
+                sent: false,
+                error: exc,
+                responses: {}
+            })
+        }
     }, [responses])
 
     // This effect checks if submitting is true which calls the submitForm function above
