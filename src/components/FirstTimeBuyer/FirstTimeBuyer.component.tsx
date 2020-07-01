@@ -51,7 +51,7 @@ const FirstTimeBuyer: React.FC = () => {
                                     assist you through the process and provide you with peace of
                                     mind.
                                 </Mission>
-                                <Mission className="mt-3">
+                                <Mission className="mt-3 d-none d-sm-block">
                                     Our brokers understand the journey for a first home buyer, and
                                     we will work for you throughout the entire journey, providing
                                     you with options that are right for your circumstances.

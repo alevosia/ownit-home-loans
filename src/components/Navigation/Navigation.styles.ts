@@ -34,26 +34,8 @@ export const NavLink = styled(NavHashLink)`
     text-decoration: none;
     margin-left: 20px;
 
-    &::before {
-        position: absolute;
-        content: '';
-        display: block;
-        width: 100%;
-        height: 3px;
-        background-color: ${Colors.DARK_BLUE};
-        left: 0;
-        bottom: -5px;
-        transform-origin: left;
-        transform: scale(0);
-        transition: 0.25s linear;
-    }
-
     &:hover {
         text-decoration: none;
-    }
-
-    &:hover:before {
-        transform: scale(1);
     }
 
     @media only screen and (min-width: ${Breakpoints.PHONE}px) {
@@ -73,6 +55,24 @@ export const NavLink = styled(NavHashLink)`
     @media only screen and (min-width: ${Breakpoints.DESKTOP}px) {
         &:not(:last-child) {
             margin-right: 60px;
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: ${Colors.DARK_BLUE};
+            left: 0;
+            bottom: -3px;
+            transform-origin: left;
+            transform: scale(0);
+            transition: 0.25s linear;
+        }
+
+        &:hover:before {
+            transform: scale(1);
         }
     }
 `

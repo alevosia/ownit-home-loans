@@ -85,6 +85,6 @@ export const Mission = styled.p`
     }
 
     @media only screen and (min-width: ${Breakpoints.DESKTOP}px) {
-        font-size: 1.1em;
+        font-size: ${FontSizes.BIG};
     }
 `

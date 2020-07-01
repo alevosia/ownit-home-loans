@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 
+import { Breakpoints } from '../constants'
 interface Props {
     color?: string
     imageUrl?: string
@@ -20,7 +21,11 @@ const FullBackground = styled.div<Props>`
     background-color: ${({ color }) => color};
     background-image: ${({ imageUrl }) => `url(${imageUrl})`};
     background-position: center center;
-    background-attachment: ${({ fixed }) => fixed && 'fixed'};
+
+    @media only screen and (min-width: ${Breakpoints.DESKTOP}px) {
+        background-attachment: ${({ fixed }) => fixed && 'fixed'};
+    }
+
     background-size: ${({ size }) => size};
     filter: ${({ blur }) => `blur(${blur})`};
 `

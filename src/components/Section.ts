@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-
+import { Breakpoints } from '../constants'
 interface Props {
     height?: string
     width?: string
@@ -16,10 +16,16 @@ const centeredStyles = css`
 
 export default styled.section<Props>`
     position: relative;
+    min-height: 700px;
+    max-height: 700px;
     height: ${({ height }) => height || 'auto'};
     width: ${({ width }) => width || 'auto'};
     display: ${({ flexed }) => flexed && 'flex'};
     flex-direction: ${({ direction }) => direction};
 
     ${({ centered }) => centered && centeredStyles};
+
+    @media only screen and (min-width: ${Breakpoints.DESKTOP}px) {
+        max-height: 900px;
+    }
 `

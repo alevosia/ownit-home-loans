@@ -17,7 +17,14 @@ import { Heading, LinksWrapper, LinkButton } from './HomeBanner.styles'
 
 const HomeBanner: React.FC = () => {
     return (
-        <Section id="banner" flexed={true} direction="column" centered={true} height="100%">
+        <Section
+            id="banner"
+            flexed={true}
+            direction="column"
+            centered={true}
+            height="100%"
+            style={{ maxHeight: 'unset', minHeight: 'unset' }}
+        >
             <FullBackground imageUrl={HomeKeys} size="cover" fixed={true} blur="3px" />
             <Container>
                 <Row>
