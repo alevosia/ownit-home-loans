@@ -13,14 +13,17 @@ const InputField: React.FC<Props> = ({
 }) => {
     const inputRef = useRef<HTMLInputElement>(null)
 
-    // Focus on the input field upon first render except if it's email or contact
+    // Set the value to the minimum on first render and focus except if it's email or contact
     useEffect(() => {
         if (name === 'email' || name === 'contact') return
 
         if (inputRef && inputRef.current) {
+            if (min != null) {
+                inputRef.current.value = min.toString()
+            }
             inputRef.current.focus()
         }
-    }, [name])
+    }, [min, name])
 
     // Triggers everytime the input value has changed
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
