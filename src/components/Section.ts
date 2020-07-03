@@ -15,6 +15,7 @@ const centeredStyles = css`
 `
 
 export default styled.section<Props>`
+    z-index: 0;
     position: relative;
     min-height: 700px;
     max-height: 700px;

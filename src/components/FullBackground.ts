@@ -10,7 +10,7 @@ interface Props {
 }
 
 const FullBackground = styled.div<Props>`
-    z-index: 0;
+    z-index: -1;
     position: absolute;
     top: 0;
     left: 0;
