@@ -53,11 +53,17 @@ export const NavLink = styled(NavHashLink)`
     }
 
     @media only screen and (min-width: ${Breakpoints.DESKTOP}px) {
-        &:not(:last-child) {
-            margin-right: 60px;
+        background: #FFFFFF00;
+        border-radius: 30px;
+        padding: 8px 30px;
+        transition: all 0.5s ease;
+
+        &:focus, &:hover {
+            background: #FFFFFF99;
         }
 
-        &::before {
+        /*  Underline hover animation */
+        /* &::before {
             position: absolute;
             content: '';
             display: block;
@@ -73,7 +79,7 @@ export const NavLink = styled(NavHashLink)`
 
         &:hover:before {
             transform: scale(1);
-        }
+        } */
     }
 `
 

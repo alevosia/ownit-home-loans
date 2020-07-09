@@ -55,8 +55,9 @@ export const LinkButton = styled.a`
     }
 
     @media only screen and (min-width: ${Breakpoints.DESKTOP}px) {
-        width: 49%;
+        width: 48%;
         padding: 10px 30px;
+        margin-bottom: 20px;
 
         &:first-child {
             font-size: 14px;

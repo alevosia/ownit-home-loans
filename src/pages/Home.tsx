@@ -3,7 +3,7 @@ import React from 'react'
 import Page from '../components/Page'
 import Navigation from '../components/Navigation/Navigation.component'
 import HomeBanner from '../components/HomeBanner/HomeBanner.component'
-import AboutUs from '../components/AboutUs/AboutUs.component'
+import WhoWeAre from '../components/WhoWeAre/WhoWeAre.component'
 import WhyChooseUs from '../components/WhyChooseUs/WhyChooseUs.component'
 import Footer from '../components/Footer/Footer.component'
 import FirstTimeBuyer from '../components/FirstTimeBuyer/FirstTimeBuyer.component'
@@ -17,7 +17,7 @@ const HomePage: React.FC = () => {
         <Page>
             <Navigation fixed={true} transparent={true} />
             <HomeBanner />
-            <AboutUs />
+            <WhoWeAre />
             <WhyChooseUs />
             <FirstTimeBuyer />
             <Refinancing />

@@ -15,34 +15,42 @@ import Col from 'react-bootstrap/Col'
 
 const Documents: React.FC = () => {
     return (
-        <Section style={{ minHeight: 'unset', padding: '15px', color: Colors.WHITE }}>
+        <Section style={{ minHeight: 'unset', padding: '30px 15px', color: Colors.WHITE }}>
             <FullBackground color={Colors.LIGHT_BLUE} />
             <Container>
-                <h3 className="text-center mb-3">Compliance</h3>
                 <Row className="flex-wrap">
-                    <Col xs={12} md={6} lg={4}>
+                    <Col xs={12} md={6} lg={4} className="mb-3">
                         <DownloadButton label={'FAQs'} fileUrl={URLs.FAQS} />
                     </Col>
-                    <Col xs={12} md={6} lg={4}>
+                    <Col xs={12} md={6} lg={4} className="mb-3">
                         <DownloadButton label={'Privacy Policy'} fileUrl={URLs.PRIVACY_POLICY} />
                     </Col>
-                    <Col xs={12} md={6} lg={4}>
+                    <Col xs={12} md={6} lg={4} className="mb-3">
                         <DownloadButton
                             label={'Website Terms and Conditions'}
                             fileUrl={URLs.WEBSITE_TERMS_AND_CONDITIONS}
                         />
                     </Col>
-                    <Col xs={12} md={6} lg={4}>
+                    <Col xs={12} md={6} lg={4} className="mb-3 mb-lg-0 ml-lg-auto">
                         <DownloadButton
                             label={'Compliments and Concerns'}
                             fileUrl={URLs.COMPLIMENTS_AND_CONCERNS}
                         />
                     </Col>
-                    <Col xs={12} md={6} lg={4}>
+                    <Col xs={12} md={6} lg={4} className="mx-md-auto ml-lg-0 mr-auto">
                         <DownloadButton
                             label={'Collection Notification Statement'}
                             fileUrl={URLs.COLLECTION_NOTIFICATION_STATEMENT}
                         />
+                    </Col>
+                </Row>
+                <Row className="flex-column mt-4">
+                    <Col className="text-center">
+                        Ownit Home Loans Australia Pty Ltd ABN 39 636 897 320 T/as Ownit Home Loans
+                    </Col>
+                    <Col className="text-center">
+                        Credit Representative Number 523065 of Australian Credit License Number
+                        389328
                     </Col>
                 </Row>
             </Container>

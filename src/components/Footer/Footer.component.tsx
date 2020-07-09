@@ -25,16 +25,19 @@ const Footer: React.FC = () => {
                             <Col xs={12} md={{ span: 4, order: 1 }} className="mb-3 mb-md-0">
                                 <MapMarker className="icon" />
                                 <Info>
-                                    OWNit Conveyancing Beenleigh 71 Alamein Street Beenleigh QLD
-                                    4207
+                                    <strong>OWNit Home Loans</strong>
+                                    <br />
+                                    71 Alamein Street
+                                    <br />
+                                    Beenleigh QLD 4207
                                 </Info>
                             </Col>
-                            <Col xs={6} md={{ span: 4, order: 0 }}>
+                            <Col xs={12} md={{ span: 4, order: 0 }} className="mb-3 mb-md-0">
                                 <Telephone className="icon" />
                                 <Info>1300 553 750</Info>
                             </Col>
 
-                            <Col xs={6} md={{ span: 4, order: 2 }}>
+                            <Col xs={12} md={{ span: 4, order: 2 }}>
                                 <Envelope className="icon" />
                                 <Info>info@ownit.com.au</Info>
                             </Col>

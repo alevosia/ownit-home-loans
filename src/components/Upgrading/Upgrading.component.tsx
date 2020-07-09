@@ -9,6 +9,7 @@ import HousePlan from '../../assets/plans.jpeg'
 // components
 import Section from '../Section'
 import SplitBackground from '../SplitBackground'
+import CallToAction from '../CallToAction/CallToAction.component'
 
 // bootstrap
 import Container from 'react-bootstrap/Container'
@@ -33,9 +34,16 @@ const Upgrading: React.FC = () => {
                         className="d-flex align-items-center justify-content-center"
                         style={{ flex: 1 }}
                     >
-                        <RoundImageWrapper>
-                            <img src={HousePlan} alt="home keys" />
-                        </RoundImageWrapper>
+                        <Row className="flex-column align-items-center justify-content-center">
+                            <Col>
+                                <RoundImageWrapper>
+                                    <img src={HousePlan} alt="house plan" />
+                                </RoundImageWrapper>
+                            </Col>
+                            <Col className="d-none d-md-block text-center mt-3">
+                                <CallToAction to="/form">Get Started</CallToAction>
+                            </Col>
+                        </Row>
                     </Col>
 
                     <Col md={6} style={{ flex: 1 }}>
@@ -54,6 +62,9 @@ const Upgrading: React.FC = () => {
                                     positioned to deliver to you the right loan at the right rate
                                     with the right lender for you.
                                 </Mission>
+                                <CallToAction to="/form" className="mt-3 d-md-none">
+                                    Get Started
+                                </CallToAction>
                             </Col>
                         </Row>
                     </Col>

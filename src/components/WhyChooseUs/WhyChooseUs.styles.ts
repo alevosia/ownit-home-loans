@@ -66,6 +66,7 @@ export const Mission = styled.p`
     position: relative;
     color: ${Colors.DARK_BLUE};
     font-size: ${FontSizes.REGULAR};
+    text-align: justify;
     margin-bottom: 0;
 
     &::before {
@@ -80,6 +81,11 @@ export const Mission = styled.p`
         @media only screen and (min-width: ${Breakpoints.TABLET}px) {
             left: -15px;
             width: 5px;
+        }
+
+        @media only screen and (min-width: ${Breakpoints.DESKTOP}px) {
+            left: -30px;
+            width: 6px;
         }
     }
 

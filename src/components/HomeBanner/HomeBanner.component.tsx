@@ -1,5 +1,8 @@
 import React from 'react'
 
+// contants
+import { Colors } from '../../constants'
+
 // assets
 import HomeKeys from '../../assets/home_keys.jpeg'
 
@@ -31,7 +34,11 @@ const HomeBanner: React.FC = () => {
                     <Col className="d-none d-md-block"></Col>
                     <Col className="text-center text-md-left">
                         <Heading className="mb-5">
-                            We are here to help you... <strong>OWNit</strong>
+                            We are here to help you...{' '}
+                            <strong>
+                                OWN<span style={{ color: Colors.RED }}>i</span>
+                                <span style={{ color: Colors.LIGHT_BLUE }}>t</span>
+                            </strong>
                         </Heading>
                         <LinksWrapper>
                             <LinkButton href="#FirstTimeBuyer">FIRST TIME BUYER</LinkButton>

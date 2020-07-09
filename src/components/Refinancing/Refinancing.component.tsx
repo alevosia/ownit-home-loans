@@ -9,6 +9,7 @@ import Calculation from '../../assets/calculation.jpeg'
 // components
 import Section from '../Section'
 import SplitBackground from '../SplitBackground'
+import CallToAction from '../CallToAction/CallToAction.component'
 
 // bootstrap
 import Container from 'react-bootstrap/Container'
@@ -33,15 +34,22 @@ const Refinancing: React.FC = () => {
                         className="d-flex align-items-center justify-content-center"
                         style={{ flex: 1 }}
                     >
-                        <RoundImageWrapper>
-                            <img src={Calculation} alt="home keys" />
-                        </RoundImageWrapper>
+                        <Row className="flex-column align-items-center justify-content-center">
+                            <Col>
+                                <RoundImageWrapper>
+                                    <img src={Calculation} alt="calculation" />
+                                </RoundImageWrapper>
+                            </Col>
+                            <Col className="d-none d-md-block text-center mt-3">
+                                <CallToAction to="/form">Let&apos;s Talk About It</CallToAction>
+                            </Col>
+                        </Row>
                     </Col>
                     <Col md={6} style={{ flex: 1 }}>
                         <Row className="flex-column h-100 align-items-center justify-content-center">
                             <Col className="d-md-flex flex-grow-0 flex-md-grow-1 align-items-md-end">
                                 <Heading className="text-center text-md-left mb-2 mb-lg-5">
-                                    Refinance
+                                    Refinancing
                                 </Heading>
                             </Col>
                             <Col className="flex-grow-0 flex-md-grow-1">
@@ -49,8 +57,11 @@ const Refinancing: React.FC = () => {
                                     During our life’s journey our circumstances can change. Home
                                     renovations, investigating whether your current home loan fits
                                     your needs, or you require financial relief and Ownit Home Loans
-                                    is here to help
+                                    is here to help.
                                 </Mission>
+                                <CallToAction to="/form" className="mt-3 d-md-none">
+                                    Let&apos;s Talk About It
+                                </CallToAction>
                             </Col>
                         </Row>
                     </Col>

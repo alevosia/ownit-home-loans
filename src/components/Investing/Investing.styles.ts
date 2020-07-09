@@ -42,7 +42,7 @@ export const RoundImageWrapper = styled.div`
 `
 
 export const Heading = styled.h2`
-    color: ${Colors.RED};
+    color: ${Colors.DARK_BLUE};
     font-size: ${FontSizes.JUMBO};
     font-weight: bold;
     text-transform: capitalize;
@@ -63,10 +63,11 @@ export const Heading = styled.h2`
     }
 `
 
-export const Mission = styled.p`
+export const Description = styled.p`
     position: relative;
-    color: ${Colors.RED};
+    color: ${Colors.DARK_BLUE};
     font-size: ${FontSizes.REGULAR};
+    text-align: justify;
     margin-bottom: 0;
 
     &::before {
@@ -76,11 +77,16 @@ export const Mission = styled.p`
         top: 0;
         width: 3px;
         height: 100%;
-        background-color: ${Colors.RED};
+        background-color: ${Colors.DARK_BLUE};
 
         @media only screen and (min-width: ${Breakpoints.TABLET}px) {
             left: -15px;
             width: 5px;
+        }
+
+        @media only screen and (min-width: ${Breakpoints.TABLET}px) {
+            left: -30px;
+            width: 6px;
         }
     }
 

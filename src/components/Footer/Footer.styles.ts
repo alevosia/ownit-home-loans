@@ -29,12 +29,16 @@ export const Wrapper = styled.footer`
 export const Info = styled.span`
     font-size: ${FontSizes.REGULAR};
     color: ${Colors.DARK_BLUE};
+
+    @media only screen and (min-width: ${Breakpoints.TABLET}px) {
+        font-size: ${FontSizes.BIG};
+    }
 `
 
 export const FooterImageWrapper = styled.div`
     width: 200px;
     height: auto;
-    margin: 10px auto 0 auto;
+    margin: 15px auto 0 auto;
 
     img {
         width: 100%;

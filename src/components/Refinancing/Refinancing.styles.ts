@@ -53,7 +53,7 @@ export const Heading = styled.h2`
     }
 
     @media only screen and (min-width: ${Breakpoints.TABLET}px) {
-        font-size: 4em;
+        font-size: 3.5em;
         word-spacing: 5px;
         color: ${Colors.WHITE};
     }
@@ -67,6 +67,7 @@ export const Mission = styled.p`
     position: relative;
     color: ${Colors.DARK_BLUE};
     font-size: ${FontSizes.REGULAR};
+    text-align: justify;
     margin-bottom: 0;
 
     &::before {
@@ -81,6 +82,11 @@ export const Mission = styled.p`
         @media only screen and (min-width: ${Breakpoints.TABLET}px) {
             left: -15px;
             width: 5px;
+        }
+
+        @media only screen and (min-width: ${Breakpoints.DESKTOP}px) {
+            left: -30px;
+            width: 6px;
         }
     }
 
