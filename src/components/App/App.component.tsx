@@ -5,6 +5,7 @@ import { Switch, Route } from 'react-router-dom'
 // pages
 import HomePage from '../../pages/Home'
 import FormPage from '../../pages/Form'
+import CalculatorsPage from '../../pages/Calculators'
 
 const App: React.FC = () => {
     return (
@@ -15,6 +16,9 @@ const App: React.FC = () => {
                 </Route>
                 <Route exact path="/form">
                     <FormPage />
+                </Route>
+                <Route exact path="/calculators">
+                    <CalculatorsPage />
                 </Route>
             </Switch>
         </Wrapper>

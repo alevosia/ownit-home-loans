@@ -1,0 +1,56 @@
+.VisiCalcClass {
+    background:url(/staticAssets/calculators/load.gif) 50% 15% no-repeat;
+    background-size: 80px 80px;
+    min-width: 750px;
+    min-height:800px;
+    margin:0; 
+    padding:0; 
+}
+
+#Loan_Repayment_Calculator { min-height:750px !important; }
+#Borrowing_Power_Calculator { min-height:750px !important; }
+#Budget_Planner { min-height:2850px !important; }
+#Compound_Interest_Calculator { min-height:850px !important; }
+#Credit_Card_Calculator { min-height:900px !important; }
+#How_Long_to_Repay_Calculator { min-height:750px !important; }
+#Interest_Only_Mortgage_Calculator { min-height:750px !important; }
+#Saving_Calculator { min-height:600px !important; }
+#Split_Loan_Calculator { min-height:800px !important; }
+#Property_Selling_Cost_Calculator { min-height:700px !important; }
+#Reverse_Mortgage_Calculator { min-height:1100px !important; }
+#Stamp_Duty_Calculator { min-height:800px !important; }
+#Mortgage_Switching_Calculator { min-height:1100px !important; }
+#Rent_vs_Buy_Calculator{ min-height:1100px !important; }
+#Fortnightly_Repayment_Calculator { min-height:900px !important; }
+
+@media screen and (max-width: 767px) {
+    .VisiCalcClass {
+        min-width: 100%;
+        min-height:1250px;
+        margin:0;
+        padding:0;
+    }
+
+    #Loan_Repayment_Calculator { min-height:1250px !important; }
+    #Borrowing_Power_Calculator { min-height:1800px !important; }
+    #Budget_Planner { min-height:5000px !important; }
+    #Comparison_Rate_Calculator { min-height:1450px !important; }
+    #Compound_Interest_Calculator { min-height:1200px !important; }
+    #Credit_Card_Calculator { min-height:1500px !important; }
+    #Extra_Repayment_Calculator { min-height:1450px !important; }
+    #Home_Loan_Offset_Calculator{ min-height:1400px !important; }
+    #How_Long_to_Repay_Calculator { min-height:1250px !important; }
+    #Interest_Only_Mortgage_Calculator { min-height:1450px !important; }
+    #Saving_Calculator { min-height:1250px !important; }
+    #Introductory_Rate_Loan_Calculator{ min-height:1400px !important; }
+    #Lump_Sum_Repayment_Calculator { min-height:1450px !important; }
+    #Split_Loan_Calculator { min-height:1550px !important; }
+    #Loan_Comparison_Calculator { min-height:1800px !important; }
+    #Property_Buying_Cost_Calculator { min-height:1850px !important; }
+    #Property_Selling_Cost_Calculator { min-height:1650px !important; }
+    #Reverse_Mortgage_Calculator { min-height:1900px !important; }
+    #Stamp_Duty_Calculator { min-height:1250px !important; }
+    #Mortgage_Switching_Calculator { min-height:2000px !important; }
+    #Rent_vs_Buy_Calculator{ min-height:2000px !important; }
+    #Fortnightly_Repayment_Calculator { min-height:2000px !important; }
+}
