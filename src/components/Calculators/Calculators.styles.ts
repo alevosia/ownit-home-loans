@@ -15,7 +15,7 @@ export const Button = styled.button`
         border: none;
         border-radius: 5px;
         border-bottom: 2px solid ${Colors.LIGHT_BLUE};
-        box-shadow: 0px 0px 6px ${Colors.LIGHT_BLUE};
+        box-shadow: 0px 1px 6px ${Colors.LIGHT_BLUE};
     }
 
     @media only screen and (min-width: ${Breakpoints.TABLET}px) {
