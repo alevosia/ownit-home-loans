@@ -41,7 +41,7 @@ const Investing: React.FC = () => {
                                 </RoundImageWrapper>
                             </Col>
                             <Col className="d-none d-md-block text-center mt-3">
-                                <CallToAction to="/form">
+                                <CallToAction to="/contact">
                                     Let&apos;s Manage Your
                                     <br />
                                     Investment
@@ -62,7 +62,7 @@ const Investing: React.FC = () => {
                                     step, Ownit Home Loans can deliver the right investment loan to
                                     fit your circumstances.
                                 </Description>
-                                <CallToAction to="/form" className="mt-3 d-md-none">
+                                <CallToAction to="/contact" className="mt-3 d-md-none">
                                     Let&apos;s Manage Your Investment
                                 </CallToAction>
                             </Col>

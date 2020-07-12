@@ -41,7 +41,7 @@ const Upgrading: React.FC = () => {
                                 </RoundImageWrapper>
                             </Col>
                             <Col className="d-none d-md-block text-center mt-3">
-                                <CallToAction to="/form">Get Started</CallToAction>
+                                <CallToAction to="/contact">Get Started</CallToAction>
                             </Col>
                         </Row>
                     </Col>
@@ -62,7 +62,7 @@ const Upgrading: React.FC = () => {
                                     positioned to deliver to you the right loan at the right rate
                                     with the right lender for you.
                                 </Mission>
-                                <CallToAction to="/form" className="mt-3 d-md-none">
+                                <CallToAction to="/contact" className="mt-3 d-md-none">
                                     Get Started
                                 </CallToAction>
                             </Col>

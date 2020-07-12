@@ -41,7 +41,7 @@ const Refinancing: React.FC = () => {
                                 </RoundImageWrapper>
                             </Col>
                             <Col className="d-none d-md-block text-center mt-3">
-                                <CallToAction to="/form">Let&apos;s Talk About It</CallToAction>
+                                <CallToAction to="/contact">Let&apos;s Talk About It</CallToAction>
                             </Col>
                         </Row>
                     </Col>
@@ -59,7 +59,7 @@ const Refinancing: React.FC = () => {
                                     your needs, or you require financial relief, Ownit Home Loans is
                                     here to help.
                                 </Mission>
-                                <CallToAction to="/form" className="mt-3 d-md-none">
+                                <CallToAction to="/contact" className="mt-3 d-md-none">
                                     Let&apos;s Talk About It
                                 </CallToAction>
                             </Col>
