@@ -56,8 +56,8 @@ const Refinancing: React.FC = () => {
                                 <Mission className="mt-md-3 mt-lg-5">
                                     During our life’s journey our circumstances can change. Home
                                     renovations, investigating whether your current home loan fits
-                                    your needs, or you require financial relief and Ownit Home Loans
-                                    is here to help.
+                                    your needs, or you require financial relief, Ownit Home Loans is
+                                    here to help.
                                 </Mission>
                                 <CallToAction to="/form" className="mt-3 d-md-none">
                                     Let&apos;s Talk About It

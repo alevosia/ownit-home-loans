@@ -48,7 +48,8 @@ const WhoWeAre: React.FC = () => {
                                 <Mission className="mt-md-3 mt-lg-5">
                                     <strong>Our mission</strong> through great customer service and
                                     strong industry relationships is to create raving fans. We work
-                                    personally with each and every client to find loan for them.
+                                    personally with each and every client to find the right loan for
+                                    them.
                                 </Mission>
                                 <CallToAction to="/form" className="mt-3 d-md-none">
                                     Get Started
