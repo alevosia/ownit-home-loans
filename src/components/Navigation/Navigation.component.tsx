@@ -19,17 +19,24 @@ const Navigation: React.FC<Props> = ({ fixed, transparent }) => {
     const { open } = useContext(DrawerContext)
     const navRef = useRef<HTMLDivElement | null>(null)
 
-    useEffect(() => {
-        window.addEventListener('scroll', function () {
-            if (navRef && navRef.current) {
-                if (window.scrollY > navRef?.current?.offsetTop + navRef?.current?.offsetHeight) {
-                    navRef.current.classList.add('opaque')
-                } else {
-                    navRef.current.classList.remove('opaque')
-                }
+    function checkScroll() {
+        if (navRef && navRef.current) {
+            if (window.scrollY > navRef?.current?.offsetTop + navRef?.current?.offsetHeight) {
+                navRef.current.classList.add('opaque')
+            } else {
+                navRef.current.classList.remove('opaque')
             }
-        })
-    }, [])
+        }
+    }
+    useEffect(() => {
+        if (fixed) {
+            window.addEventListener('scroll', checkScroll)
+        }
+
+        return () => {
+            window.removeEventListener('scroll', checkScroll)
+        }
+    }, [fixed])
 
     return (
         <Wrapper id="nav" ref={navRef} fixed={fixed} transparent={transparent}>

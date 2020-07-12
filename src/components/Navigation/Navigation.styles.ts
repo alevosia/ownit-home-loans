@@ -16,15 +16,12 @@ const FixedStyles = css`
 `
 
 export const LinksWrapper = styled.div`
-    width: auto;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
     display: none;
 
     @media only screen and (min-width: ${Breakpoints.DESKTOP}px) {
-        display: block;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
     }
 `
 
@@ -67,6 +64,7 @@ export const NavLink = styled(NavHashLink)`
 
     @media only screen and (min-width: ${Breakpoints.WIDE_DESKTOP}px) {
         font-size: ${FontSizes.BIG};
+        padding: 10px 20px;
 
         &:not(:last-child) {
             margin-right: 30px;
@@ -98,11 +96,11 @@ export const Wrapper = styled.nav<WrapperProps>`
     }
 
     @media only screen and (min-width: ${Breakpoints.TABLET}px) {
-        padding: 10px 20px 0 20px;
+        padding: 0px 20px;
     }
 
     @media only screen and (min-width: ${Breakpoints.DESKTOP}px) {
-        padding: 10px 30px 0 30px;
+        padding: 0px 30px;
     }
 
     &.opaque {

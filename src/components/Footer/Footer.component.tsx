@@ -17,7 +17,7 @@ import { Wrapper, Info, FooterImageWrapper } from './Footer.styles'
 
 const Footer: React.FC = () => {
     return (
-        <Wrapper id="footer">
+        <Wrapper id="footer" className="mt-auto">
             <Container>
                 <Row>
                     <Col>

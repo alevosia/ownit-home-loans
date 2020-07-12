@@ -11,7 +11,6 @@ export const Wrapper = styled.footer`
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow-x: hidden;
 
     .icon {
         margin: 0 auto 5px auto;
