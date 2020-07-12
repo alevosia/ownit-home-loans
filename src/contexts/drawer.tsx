@@ -26,8 +26,6 @@ export const DrawerProvider: React.FC = ({ children }) => {
     const close = () => setOpen(false)
     const toggle = () => setOpen(!isOpen)
 
-    console.log(isOpen)
-
     return (
         <DrawerContext.Provider
             value={{
