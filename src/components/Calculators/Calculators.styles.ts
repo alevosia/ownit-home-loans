@@ -21,6 +21,11 @@ export const Button = styled.button`
     @media only screen and (min-width: ${Breakpoints.TABLET}px) {
         width: 450px;
     }
+
+    @media only screen and (min-width: ${Breakpoints.DESKTOP}px) {
+        width: 500px;
+        height: 55px;
+    }
 `
 
 export const Title = styled.h1`

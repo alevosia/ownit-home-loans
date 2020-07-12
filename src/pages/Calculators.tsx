@@ -7,6 +7,7 @@ import '../styles/calculators.css'
 import Page from '../components/Page'
 import Navigation from '../components/Navigation/Navigation.component'
 import Drawer from '../components/Drawer/Drawer.component'
+import PageTitle from '../components/PageTitle/PageTitle.component'
 import Calculators from '../components/Calculators/Calculators.component'
 import Footer from '../components/Footer/Footer.component'
 
@@ -15,6 +16,7 @@ const CalculatorsPage: React.FC = () => {
         <Page className="d-flex flex-column">
             <Navigation transparent={false} />
             <Drawer />
+            <PageTitle title={'Calculators'} />
             <Calculators />
             <Footer />
         </Page>

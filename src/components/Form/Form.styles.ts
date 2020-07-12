@@ -7,21 +7,12 @@ export const Wrapper = styled.div`
     width: 100%;
     max-width: ${Breakpoints.TABLET}px;
     height: auto;
-    /* min-height: 100%; */
     margin: 0 auto;
-    padding: 30px 15px;
-
-    /* @media only screen and (min-width: ${Breakpoints.PHONE}px) {
-        margin: 15% auto 0 auto;
-    }
+    padding: 10px 5px 45px 5px;
 
     @media only screen and (min-width: ${Breakpoints.TABLET}px) {
-        margin: 10% auto 0 auto;
+        padding: 30px 15px 45px 15px;
     }
-
-    @media only screen and (min-width: ${Breakpoints.DESKTOP}px) {
-        margin: 5% auto 0 auto;
-    } */
 `
 
 export const BackArrowWrapper = styled.div`

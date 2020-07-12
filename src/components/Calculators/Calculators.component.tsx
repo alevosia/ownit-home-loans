@@ -10,7 +10,7 @@ import {
 } from '../../constants/calculators'
 
 // styled components
-import { Title, Button, CalculatorContainer } from './Calculators.styles'
+import { Button, CalculatorContainer } from './Calculators.styles'
 
 // react bootstrap
 import Container from 'react-bootstrap/Container'
@@ -21,8 +21,8 @@ const Calculators: React.FC = () => {
     const [selectedCalculator, setselectedCalculator] = useState<Calculator | null>(null)
 
     return (
-        <Container className="p-1 p-md-3">
-            <Title className="mt-3 mt-md-5 mb-3">Calculators</Title>
+        <Container className="p-3 p-lg-5">
+            {/* <Title className="mt-3 mt-md-5 mb-3">Calculators</Title> */}
             {selectedCalculator ? (
                 <CalculatorContainer>
                     <Button className="mb-3" onClick={() => setselectedCalculator(null)}>
@@ -36,9 +36,7 @@ const Calculators: React.FC = () => {
                         frameBorder="0"
                         scrolling="no"
                     ></iframe>
-                    <Button className="mb-3" onClick={() => setselectedCalculator(null)}>
-                        Close
-                    </Button>
+                    <Button onClick={() => setselectedCalculator(null)}>Close</Button>
                 </CalculatorContainer>
             ) : (
                 <Row className="flex-column">

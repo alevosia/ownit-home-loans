@@ -20,7 +20,7 @@ const Drawer: React.FC = () => {
                 <Link to="/calculators" onClick={close}>
                     Calculators
                 </Link>
-                <Link to="/#footer" onClick={close}>
+                <Link to="/contact" onClick={close}>
                     Contact Us
                 </Link>
             </Links>
