@@ -21,6 +21,11 @@ export const LinksWrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
+    display: none;
+
+    @media only screen and (min-width: ${Breakpoints.DESKTOP}px) {
+        display: block;
+    }
 `
 
 export const NavLink = styled(NavHashLink)`
@@ -47,39 +52,22 @@ export const NavLink = styled(NavHashLink)`
         margin-left: unset;
         font-size: ${FontSizes.BIG};
 
-        &:not(:last-child) {
+        /* &:not(:last-child) {
             margin-right: 30px;
-        }
+        } */
     }
 
     @media only screen and (min-width: ${Breakpoints.DESKTOP}px) {
-        background: #FFFFFF00;
+        background: #ffffff00;
         border-radius: 30px;
-        padding: 8px 30px;
+        padding: 10px 15px;
+        margin: 0px 5px;
         transition: all 0.5s ease;
 
-        &:focus, &:hover {
-            background: #FFFFFF99;
+        &:focus,
+        &:hover {
+            background: #ffffff99;
         }
-
-        /*  Underline hover animation */
-        /* &::before {
-            position: absolute;
-            content: '';
-            display: block;
-            width: 100%;
-            height: 3px;
-            background-color: ${Colors.DARK_BLUE};
-            left: 0;
-            bottom: -3px;
-            transform-origin: left;
-            transform: scale(0);
-            transition: 0.25s linear;
-        }
-
-        &:hover:before {
-            transform: scale(1);
-        } */
     }
 `
 
@@ -132,5 +120,22 @@ export const LogoWrapper = styled.div`
 
     @media only screen and (min-width: ${Breakpoints.TABLET}px) {
         max-width: 120px;
+    }
+`
+
+export const MobileMenuButton = styled.button`
+    background: none;
+    color: ${Colors.DARK_BLUE};
+    border: none;
+    border-radius: 0;
+    font-size: ${FontSizes.BIG};
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 10px;
+
+    @media only screen and (min-width: ${Breakpoints.DESKTOP}px) {
+        display: none;
     }
 `

@@ -2,6 +2,7 @@ import React from 'react'
 
 import Page from '../components/Page'
 import Navigation from '../components/Navigation/Navigation.component'
+import Drawer from '../components/Drawer/Drawer.component'
 import HomeBanner from '../components/HomeBanner/HomeBanner.component'
 import WhoWeAre from '../components/WhoWeAre/WhoWeAre.component'
 import WhyChooseUs from '../components/WhyChooseUs/WhyChooseUs.component'
@@ -16,6 +17,7 @@ const HomePage: React.FC = () => {
     return (
         <Page>
             <Navigation fixed={true} transparent={true} />
+            <Drawer />
             <HomeBanner />
             <WhoWeAre />
             <WhyChooseUs />

@@ -8,6 +8,8 @@ import { useCalculators } from '../effects/calculators'
 
 // components
 import Page from '../components/Page'
+import Navigation from '../components/Navigation/Navigation.component'
+import Drawer from '../components/Drawer/Drawer.component'
 // import Calculator from '../../components/Calculator'
 
 // react bootstrap
@@ -29,6 +31,8 @@ const CalculatorsPage: React.FC = () => {
 
     return (
         <Page>
+            <Navigation transparent={false} />
+            <Drawer />
             <Container>
                 <h1 className="text-center">Calculators</h1>
 

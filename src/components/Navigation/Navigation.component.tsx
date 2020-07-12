@@ -1,11 +1,14 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect, useContext } from 'react'
 import { NavHashLink } from 'react-router-hash-link'
 
 // assets
 import Logo from '../../assets/logo.png'
 
 // styles
-import { Wrapper, LogoWrapper, LinksWrapper, NavLink } from './Navigation.styles'
+import { Wrapper, LogoWrapper, LinksWrapper, NavLink, MobileMenuButton } from './Navigation.styles'
+
+// contexts
+import { DrawerContext } from '../../contexts/drawer'
 
 interface Props {
     fixed?: boolean
@@ -13,6 +16,7 @@ interface Props {
 }
 
 const Navigation: React.FC<Props> = ({ fixed, transparent }) => {
+    const { open } = useContext(DrawerContext)
     const navRef = useRef<HTMLDivElement | null>(null)
 
     useEffect(() => {
@@ -38,8 +42,10 @@ const Navigation: React.FC<Props> = ({ fixed, transparent }) => {
                 <NavLink to="/#banner">Home</NavLink>
                 <NavLink to="/#about">Who We Are</NavLink>
                 <NavLink to="/form">Get Started</NavLink>
+                <NavLink to="/calculators">Calculators</NavLink>
                 <NavLink to="/#footer">Contact</NavLink>
             </LinksWrapper>
+            <MobileMenuButton onClick={open}>Menu</MobileMenuButton>
         </Wrapper>
     )
 }
