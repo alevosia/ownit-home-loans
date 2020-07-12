@@ -19,25 +19,22 @@ const Documents: React.FC = () => {
             <FullBackground color={Colors.LIGHT_BLUE} />
             <Container>
                 <Row className="flex-wrap">
-                    <Col xs={12} md={6} lg={4} className="mb-3">
-                        <DownloadButton label={'FAQs'} fileUrl={URLs.FAQS} />
-                    </Col>
-                    <Col xs={12} md={6} lg={4} className="mb-3">
+                    <Col xs={12} md={6} className="mb-3">
                         <DownloadButton label={'Privacy Policy'} fileUrl={URLs.PRIVACY_POLICY} />
                     </Col>
-                    <Col xs={12} md={6} lg={4} className="mb-3">
+                    <Col xs={12} md={6} className="mb-3">
                         <DownloadButton
-                            label={'Website Terms and Conditions'}
+                            label={'Terms and Conditions'}
                             fileUrl={URLs.WEBSITE_TERMS_AND_CONDITIONS}
                         />
                     </Col>
-                    <Col xs={12} md={6} lg={4} className="mb-3 mb-lg-0 ml-lg-auto">
+                    <Col xs={12} md={6} className="mb-3 mb-md-0">
                         <DownloadButton
                             label={'Compliments and Concerns'}
                             fileUrl={URLs.COMPLIMENTS_AND_CONCERNS}
                         />
                     </Col>
-                    <Col xs={12} md={6} lg={4} className="mx-md-auto ml-lg-0 mr-auto">
+                    <Col xs={12} md={6}>
                         <DownloadButton
                             label={'Collection Notification Statement'}
                             fileUrl={URLs.COLLECTION_NOTIFICATION_STATEMENT}
