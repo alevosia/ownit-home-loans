@@ -51,10 +51,6 @@ export const NavLink = styled(NavHashLink)`
     @media only screen and (min-width: ${Breakpoints.TABLET}px) {
         margin-left: unset;
         font-size: ${FontSizes.BIG};
-
-        /* &:not(:last-child) {
-            margin-right: 30px;
-        } */
     }
 
     @media only screen and (min-width: ${Breakpoints.DESKTOP}px) {
@@ -67,6 +63,12 @@ export const NavLink = styled(NavHashLink)`
         &:focus,
         &:hover {
             background: #ffffff99;
+        }
+    }
+
+    @media only screen and (min-width: ${Breakpoints.WIDE_DESKTOP}px) {
+        &:not(:last-child) {
+            margin-right: 30px;
         }
     }
 `

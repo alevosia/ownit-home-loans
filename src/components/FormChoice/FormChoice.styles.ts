@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { Colors, FontSizes } from '../../constants'
+import { Colors, FontSizes, Breakpoints } from '../../constants'
 
 export const Wrapper = styled.div`
     height: auto;
@@ -27,4 +27,13 @@ export const Value = styled.span`
     color: ${Colors.LIGHT_BLUE};
     font-size: ${FontSizes.BIG};
     font-weight: normal;
+
+    @media only screen and (min-width: ${Breakpoints.DESKTOP}px) {
+        border: none;
+        border-radius: 0;
+        padding-bottom: 3px;
+        &:hover {
+            border-bottom: 2px solid ${Colors.LIGHT_BLUE};
+        }
+    }
 `

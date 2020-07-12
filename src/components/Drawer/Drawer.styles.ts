@@ -44,11 +44,14 @@ export const Links = styled.div`
 
 export const Close = styled.div`
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     top: 30px;
     right: 30px;
-    width: 30px;
-    height: 30px;
+    width: 45px;
+    height: 45px;
     color: ${Colors.WHITE};
-    font-size: ${FontSizes.LARGE};
+    font-size: ${FontSizes.ASTRONOMICAL};
     text-align: center;
 `

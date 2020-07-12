@@ -43,7 +43,7 @@ const Navigation: React.FC<Props> = ({ fixed, transparent }) => {
                 <NavLink to="/#about">Who We Are</NavLink>
                 <NavLink to="/form">Get Started</NavLink>
                 <NavLink to="/calculators">Calculators</NavLink>
-                <NavLink to="/#footer">Contact</NavLink>
+                <NavLink to="/#footer">Contact Us</NavLink>
             </LinksWrapper>
             <MobileMenuButton onClick={open}>Menu</MobileMenuButton>
         </Wrapper>

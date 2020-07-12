@@ -6,9 +6,9 @@ const Drawer: React.FC = () => {
     const { isOpen, close } = useContext(DrawerContext)
     return (
         <Container className={isOpen ? 'open' : 'closed'}>
-            <Close onClick={close}>X</Close>
+            <Close onClick={close}>&times;</Close>
             <Links>
-                <Link to="/" onClick={close}>
+                <Link to="/#banner" onClick={close}>
                     Home
                 </Link>
                 <Link to="/#about" onClick={close}>
@@ -21,7 +21,7 @@ const Drawer: React.FC = () => {
                     Calculators
                 </Link>
                 <Link to="/#footer" onClick={close}>
-                    Contact
+                    Contact Us
                 </Link>
             </Links>
         </Container>

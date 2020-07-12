@@ -1,17 +1,23 @@
 import { useState, useEffect } from 'react'
-import { calculatorConstants } from '../constants/calculators'
+import {
+    LoanRepaymentCalculator,
+    StampDutyCalculator,
+    BorrowingPowerCalculator,
+    BudgetPlanner,
+    LoanComparisonCalculator
+} from '../constants/calculators'
 
 export const useCalculators = (): Calculator[] => {
     const [calculators, setCalculators] = useState<Calculator[]>([])
 
     useEffect(() => {
-        const calcsArray: Calculator[] = []
-
-        for (const key in calculatorConstants) {
-            calcsArray.push(calculatorConstants[key])
-        }
-
-        setCalculators(calcsArray)
+        setCalculators([
+            LoanRepaymentCalculator,
+            StampDutyCalculator,
+            BorrowingPowerCalculator,
+            BudgetPlanner,
+            LoanComparisonCalculator
+        ])
     }, [])
 
     return calculators
