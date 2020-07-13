@@ -93,5 +93,6 @@ export const Description = styled.p`
 
     @media only screen and (min-width: ${Breakpoints.DESKTOP}px) {
         font-size: ${FontSizes.LARGE};
+        line-height: 1.25;
     }
 `
