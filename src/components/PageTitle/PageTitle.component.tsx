@@ -7,7 +7,9 @@ interface Props {
 
 const PageTitle: React.FC<Props> = ({ title }) => (
     <Wrapper>
-        <Title>{title}</Title>
+        <Title data-aos="fade-in" data-aos-delay="0">
+            {title}
+        </Title>
     </Wrapper>
 )
 

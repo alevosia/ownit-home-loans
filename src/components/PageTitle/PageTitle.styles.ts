@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Colors, FontSizes, Breakpoints } from '../../constants'
 
 export const Wrapper = styled.div`
-    min-height: 100px;
+    min-height: 75px;
     width: 100%;
     padding: 15px;
     display: flex;
@@ -20,7 +20,7 @@ export const Wrapper = styled.div`
     box-shadow: 0px 0px 10px ${Colors.RED};
 
     @media only screen and (min-width: ${Breakpoints.DESKTOP}px) {
-        min-height: 150px;
+        min-height: 100px;
     }
 `
 
@@ -30,6 +30,7 @@ export const Title = styled.h1`
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 4px;
+    margin: 0;
 
     @media only screen and (min-width: ${Breakpoints.TABLET}px) {
         font-size: ${FontSizes.GIANT};

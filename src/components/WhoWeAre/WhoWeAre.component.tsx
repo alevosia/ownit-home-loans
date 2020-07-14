@@ -35,12 +35,15 @@ const WhoWeAre: React.FC = () => {
                         style={{ flex: 1 }}
                     >
                         <RoundImageWrapper>
-                            <img src={MiniatureHome} alt="home keys" />
+                            <img src={MiniatureHome} alt="home keys" data-aos="zoom-in" />
                         </RoundImageWrapper>
                     </Col>
 
                     <Col md={6} style={{ flex: 1 }}>
-                        <Row className="flex-column h-100 align-items-center justify-content-center">
+                        <Row
+                            className="flex-column h-100 align-items-center justify-content-center"
+                            data-aos="slide-left"
+                        >
                             <Col className="d-md-flex flex-grow-0 flex-md-grow-1 align-items-md-end">
                                 <Heading className="text-center mb-3 mb-lg-5">Who We Are</Heading>
                             </Col>

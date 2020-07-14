@@ -48,7 +48,7 @@ const FormQuestion: React.FC<Props> = ({
 
     // Renders multiple choices or input fields depending on the question type
     return (
-        <Wrapper>
+        <Wrapper data-aos="fade-in">
             <CFormHeader question={question} responses={responses} />
             <FormBody onSubmit={handleSubmit}>
                 {question.type === 'CHOICES' ? (

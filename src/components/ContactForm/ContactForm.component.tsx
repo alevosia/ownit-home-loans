@@ -66,7 +66,7 @@ const ContactForm: React.FC = () => {
     }
 
     return (
-        <Wrapper>
+        <Wrapper data-aos="fade-in">
             {error ? (
                 <div>Something went wrong. Please try again later.</div>
             ) : sending ? (

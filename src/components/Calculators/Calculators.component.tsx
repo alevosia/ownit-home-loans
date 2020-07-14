@@ -21,7 +21,7 @@ const Calculators: React.FC = () => {
     const [selectedCalculator, setselectedCalculator] = useState<Calculator | null>(null)
 
     return (
-        <Container className="p-3 p-lg-5">
+        <Container className="p-3 p-lg-5" data-aos="fade-in">
             {/* <Title className="mt-3 mt-md-5 mb-3">Calculators</Title> */}
             {selectedCalculator ? (
                 <CalculatorContainer>

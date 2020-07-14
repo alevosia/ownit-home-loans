@@ -37,11 +37,11 @@ const FirstTimeBuyer: React.FC = () => {
                         <Row className="flex-column align-items-center justify-content-center">
                             <Col>
                                 <RoundImageWrapper>
-                                    <img src={CoupleHome} alt="home keys" />
+                                    <img src={CoupleHome} alt="home keys" data-aos="zoom-in" />
                                 </RoundImageWrapper>
                             </Col>
                             <Col className="d-none d-md-block text-center mt-3">
-                                <CallToAction to="/form">
+                                <CallToAction to="/form" data-aos="fade-in">
                                     Let&apos;s Start The
                                     <br />
                                     Journey Together
@@ -50,14 +50,17 @@ const FirstTimeBuyer: React.FC = () => {
                         </Row>
                     </Col>
                     <Col md={6} style={{ flex: 1 }}>
-                        <Row className="flex-column h-100 align-items-center justify-content-center">
+                        <Row
+                            className="flex-column h-100 align-items-center justify-content-center"
+                            data-aos="slide-left"
+                        >
                             <Col className="d-md-flex flex-grow-0 flex-md-grow-1 align-items-md-end">
                                 <Heading className="text-center text-md-left mb-2 mb-lg-5">
                                     First Time Buyer
                                 </Heading>
                             </Col>
                             <Col className="flex-grow-0 flex-md-grow-1">
-                                <Description className="mt-md-3 mt-lg-5">
+                                <Description className="mt-md-3">
                                     The great Aussie dream is to own your home; however, the first
                                     step is often the hardest. That is where Ownit Home Loans will
                                     assist you through the process and provide you with peace of

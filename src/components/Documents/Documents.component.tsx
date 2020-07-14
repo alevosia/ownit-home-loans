@@ -3,6 +3,9 @@ import React from 'react'
 // constants
 import { Colors, URLs } from '../../constants'
 
+// styled
+import { Text } from './Documents.styles'
+
 // components
 import Section from '../Section'
 import FullBackground from '../FullBackground'
@@ -42,12 +45,23 @@ const Documents: React.FC = () => {
                     </Col>
                 </Row>
                 <Row className="flex-column mt-4">
-                    <Col className="text-center">
-                        Ownit Home Loans Australia Pty Ltd ABN 39 636 897 320 T/as Ownit Home Loans
+                    <Col className="text-center mb-1">
+                        <Text>
+                            Ownit Home Loans Australia Pty Ltd ABN 39 636 897 320 T/as Ownit Home
+                            Loans
+                        </Text>
+                    </Col>
+                    <Col className="text-center mb-1">
+                        <Text>
+                            Credit Representative 523065 is authorised under Australian Credit
+                            Licence 389328
+                        </Text>
                     </Col>
                     <Col className="text-center">
-                        Credit Representative Number 523065 of Australian Credit License Number
-                        389328
+                        <Text>
+                            Disclaimer: Your full financial situation would need to be reviewed
+                            prior to acceptance of any offer or product
+                        </Text>
                     </Col>
                 </Row>
             </Container>

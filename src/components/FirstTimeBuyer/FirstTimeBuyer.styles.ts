@@ -92,7 +92,11 @@ export const Description = styled.p`
     }
 
     @media only screen and (min-width: ${Breakpoints.DESKTOP}px) {
-        font-size: ${FontSizes.LARGE};
+        font-size: ${FontSizes.BIG};
         line-height: 1.25;
+    }
+
+    @media only screen and (min-width: ${Breakpoints.WIDE_DESKTOP}px) {
+        font-size: ${FontSizes.LARGE};
     }
 `

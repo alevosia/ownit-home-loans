@@ -26,21 +26,21 @@ const HomeBanner: React.FC = () => {
             direction="column"
             centered={true}
             height="100%"
-            style={{ maxHeight: 'unset', minHeight: 'unset' }}
+            style={{ maxHeight: 'unset', minHeight: '550px' }}
         >
             <FullBackground imageUrl={HomeKeys} size="cover" fixed={true} blur="3px" />
             <Container>
                 <Row>
                     <Col className="d-none d-md-block"></Col>
                     <Col className="text-center text-md-left">
-                        <Heading className="mb-5">
+                        <Heading className="mb-5" data-aos="fade-down">
                             We are here to help you...{' '}
                             <strong>
                                 OWN<span style={{ color: Colors.RED }}>i</span>
                                 <span style={{ color: Colors.LIGHT_BLUE }}>t</span>
                             </strong>
                         </Heading>
-                        <LinksWrapper>
+                        <LinksWrapper data-aos="fade-in" data-aos-delay="1000">
                             <LinkButton href="#FirstTimeBuyer">FIRST TIME BUYER</LinkButton>
                             <LinkButton href="#Upgrading">UPGRADING</LinkButton>
                             <LinkButton href="#Refinancing">REFINANCING</LinkButton>

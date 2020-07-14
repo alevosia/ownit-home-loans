@@ -37,16 +37,21 @@ const Refinancing: React.FC = () => {
                         <Row className="flex-column align-items-center justify-content-center">
                             <Col>
                                 <RoundImageWrapper>
-                                    <img src={Calculation} alt="calculation" />
+                                    <img src={Calculation} alt="calculation" data-aos="zoom-in" />
                                 </RoundImageWrapper>
                             </Col>
                             <Col className="d-none d-md-block text-center mt-3">
-                                <CallToAction to="/contact">Let&apos;s Talk About It</CallToAction>
+                                <CallToAction to="/contact" data-aos="fade-in">
+                                    Let&apos;s Talk About It
+                                </CallToAction>
                             </Col>
                         </Row>
                     </Col>
                     <Col md={6} style={{ flex: 1 }}>
-                        <Row className="flex-column h-100 align-items-center justify-content-center">
+                        <Row
+                            className="flex-column h-100 align-items-center justify-content-center"
+                            data-aos="slide-right"
+                        >
                             <Col className="d-md-flex flex-grow-0 flex-md-grow-1 align-items-md-end">
                                 <Heading className="text-center text-md-left mb-2 mb-lg-5">
                                     Refinancing
