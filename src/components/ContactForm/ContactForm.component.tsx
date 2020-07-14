@@ -75,7 +75,7 @@ const ContactForm: React.FC = () => {
                 <div>
                     Your message has been sent.
                     <br />
-                    We&apos;ll get to you as soon as we can.
+                    We&apos;ll get back to you as soon as we can.
                 </div>
             ) : (
                 <form onSubmit={handleSubmit}>
