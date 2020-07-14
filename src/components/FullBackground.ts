@@ -19,7 +19,7 @@ const FullBackground = styled.div<Props>`
     object-fit: cover;
 
     background-color: ${({ color }) => color};
-    background-image: ${({ imageUrl }) => `url(${imageUrl})`};
+    background-image: ${({ imageUrl }) => imageUrl && `url(${imageUrl})`};
     background-position: center center;
 
     @media only screen and (min-width: ${Breakpoints.DESKTOP}px) {
