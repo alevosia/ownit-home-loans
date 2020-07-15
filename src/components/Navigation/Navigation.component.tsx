@@ -47,7 +47,7 @@ const Navigation: React.FC<Props> = ({ fixed, transparent }) => {
             </LogoWrapper>
             <LinksWrapper>
                 <NavLink to="/#banner">Home</NavLink>
-                <NavLink to="/#about">Who We Are</NavLink>
+                <NavLink to="/#about">About Us</NavLink>
                 <NavLink to="/form">Get Started</NavLink>
                 <NavLink to="/calculators">Calculators</NavLink>
                 <NavLink to="/contact">Contact Us</NavLink>

@@ -4,7 +4,7 @@ import React from 'react'
 import { Colors } from '../../constants'
 
 // assets
-import MiniatureHome from '../../assets/miniature_home.jpeg'
+import OwnitLobby from '../../assets/ownit_lobby.jpg'
 
 // components
 import Section from '../Section'
@@ -17,7 +17,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
 // styles
-import { Heading, RoundImageWrapper, Mission } from './WhoWeAre.styles.'
+import { Heading, RoundImageWrapper, Mission } from './AboutUs.styles'
 
 const WhoWeAre: React.FC = () => {
     return (
@@ -35,7 +35,7 @@ const WhoWeAre: React.FC = () => {
                         style={{ flex: 1 }}
                     >
                         <RoundImageWrapper>
-                            <img src={MiniatureHome} alt="home keys" data-aos="zoom-in" />
+                            <img src={OwnitLobby} alt="home keys" data-aos="zoom-in" />
                         </RoundImageWrapper>
                     </Col>
 
@@ -45,7 +45,7 @@ const WhoWeAre: React.FC = () => {
                             data-aos="slide-left"
                         >
                             <Col className="d-md-flex flex-grow-0 flex-md-grow-1 align-items-md-end">
-                                <Heading className="text-center mb-3 mb-lg-5">Who We Are</Heading>
+                                <Heading className="text-center mb-3 mb-lg-5">About Us</Heading>
                             </Col>
                             <Col className="flex-grow-0 flex-md-grow-1">
                                 <Mission className="mt-md-3 mt-lg-5">

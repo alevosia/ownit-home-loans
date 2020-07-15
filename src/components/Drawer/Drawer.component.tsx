@@ -12,7 +12,7 @@ const Drawer: React.FC = () => {
                     Home
                 </Link>
                 <Link to="/#about" onClick={close}>
-                    Who We Are
+                    About Us
                 </Link>
                 <Link to="/form" onClick={close}>
                     Get Started
