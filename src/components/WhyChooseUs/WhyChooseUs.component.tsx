@@ -20,7 +20,7 @@ import { Heading, RoundImageWrapper, Mission } from './WhyChooseUs.styles'
 
 const WhyChooseUs: React.FC = () => {
     return (
-        <Section id="about" flexed={true} direction="column" centered={true} height="100%">
+        <Section flexed={true} direction="column" centered={true} height="100%">
             <SplitBackground
                 direction="to bottom"
                 firstColor={Colors.DARK_BLUE}
