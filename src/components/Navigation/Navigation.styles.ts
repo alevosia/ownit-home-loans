@@ -85,6 +85,8 @@ export const Wrapper = styled.nav<WrapperProps>`
     justify-content: space-between;
     transition: all 0.5s ease-in-out;
 
+    flex-shrink: 0;
+
     ${({ fixed }) => fixed && FixedStyles}
 
     ${NavLink} {
