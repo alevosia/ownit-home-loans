@@ -112,6 +112,7 @@ export const Wrapper = styled.nav<WrapperProps>`
 export const LogoWrapper = styled.div`
     height: 100%;
     margin-right: 10px;
+    flex-shrink: 0;
 
     img {
         height: 100%;

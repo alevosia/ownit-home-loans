@@ -9,7 +9,7 @@ import Footer from '../components/Footer/Footer.component'
 
 const FormPage: React.FC = () => {
     return (
-        <Page id="FormPage" className="h-100 d-flex flex-column">
+        <Page id="FormPage" className="d-flex flex-column">
             <Navigation transparent={false} />
             <Drawer />
             <PageTitle title={'Get Started'} />

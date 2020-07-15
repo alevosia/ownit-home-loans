@@ -12,6 +12,8 @@ export const Wrapper = styled.footer`
     align-items: center;
     justify-content: center;
 
+    flex-shrink: 0;
+
     .icon {
         margin: 0 auto 5px auto;
         display: block;
